@@ -32,3 +32,20 @@ from these notes.
 - **Testability decision:** the expected values in the UI tests must be computed by the tests' own code,
   never by importing the app's `emi.ts`. Otherwise a bug in the app's maths would also be in the
   "expected" value and the test would still pass.
+
+## Phase 2: Test framework
+
+- **Used for:** wiring Playwright + playwright-bdd (projects, reporters, fixtures), the environment loader,
+  and the base page object.
+- **Checked the real API instead of guessing:** playwright-bdd is at v9. Its config options, the
+  `cucumberReporter` options and `defineBddProject` were read from the package's type definitions. This
+  showed it needs no separate `@cucumber/cucumber` install, and that it ships an `aiFix` prompt option,
+  which is relevant to the self-healing phase.
+- **First draft replaced:** the first version of the API steps kept the last response in a module-level
+  `WeakMap` keyed by `testInfo`. It worked, but it was not idiomatic and was hard to read. It was replaced
+  with a typed, per-scenario `ScenarioContext` fixture.
+- **Failure path proven, not assumed:** a temporary, deliberately failing feature (then deleted) confirmed
+  that a failed scenario keeps a screenshot, video, trace and `error-context.md`, and that an uncaught
+  error thrown by the app fails the scenario even when its assertions pass.
+- **Note for Phase 6:** Playwright's `error-context.md` holds an accessibility snapshot of the page at the
+  moment of failure, which is useful input for an AI locator-healing prompt.

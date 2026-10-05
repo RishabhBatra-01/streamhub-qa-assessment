@@ -1,5 +1,6 @@
 import js from '@eslint/js';
 import reactHooks from 'eslint-plugin-react-hooks';
+import playwright from 'eslint-plugin-playwright';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
@@ -16,5 +17,13 @@ export default tseslint.config(
     extends: [reactHooks.configs.flat.recommended],
     plugins: { 'react-refresh': reactRefresh },
     rules: { 'react-refresh/only-export-components': ['warn', { allowConstantExport: true }] },
+  },
+  {
+    files: ['tests/**/*.ts'],
+    extends: [playwright.configs['flat/recommended']],
+    rules: {
+      // Assertions live in "Then" step definitions, which the plugin cannot see as tests.
+      'playwright/no-standalone-expect': 'off',
+    },
   },
 );

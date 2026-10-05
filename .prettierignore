@@ -2,3 +2,5 @@ node_modules
 app/dist
 reports
 package-lock.json
+test-results
+.features-gen

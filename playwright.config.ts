@@ -1,0 +1,78 @@
+import { defineConfig, devices } from '@playwright/test';
+import { cucumberReporter, defineBddProject } from 'playwright-bdd';
+import { env } from './config/env';
+
+const REPORTS_DIR = 'reports';
+
+/** Files every project needs: the custom `test` (with page-object fixtures) and shared hooks. */
+const SHARED_STEPS = ['tests/support/fixtures.ts', 'tests/support/hooks.ts'];
+
+export default defineConfig({
+  outputDir: 'test-results',
+  fullyParallel: true,
+  forbidOnly: env.isCI,
+  // Retries only in CI, so a flaky test is reported as "flaky" there instead of failing the build,
+  // while local runs show every failure straight away.
+  retries: env.isCI ? 2 : 0,
+  workers: env.isCI ? 2 : undefined,
+  timeout: 30_000,
+  expect: { timeout: 5_000 },
+
+  reporter: [
+    ['list'],
+    ['html', { outputFolder: `${REPORTS_DIR}/playwright-html`, open: 'never' }],
+    cucumberReporter('html', { outputFile: `${REPORTS_DIR}/cucumber/cucumber-report.html` }),
+    cucumberReporter('json', { outputFile: `${REPORTS_DIR}/cucumber/cucumber-report.json` }),
+    ['junit', { outputFile: `${REPORTS_DIR}/junit/results.xml` }],
+  ],
+
+  use: {
+    headless: env.headless,
+    trace: 'retain-on-failure',
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
+  },
+
+  projects: [
+    {
+      ...defineBddProject({
+        name: 'ui',
+        features: 'tests/features/ui/**/*.feature',
+        featuresRoot: 'tests/features',
+        steps: ['tests/steps/ui/**/*.ts', ...SHARED_STEPS],
+      }),
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: env.appBaseUrl,
+        // The app honours prefers-reduced-motion, so charts render without animation and
+        // tests never have to wait for an animation to finish.
+        reducedMotion: 'reduce',
+        // Keep a screenshot of every UI scenario as execution evidence for the report.
+        screenshot: 'on',
+      },
+    },
+    {
+      ...defineBddProject({
+        name: 'api',
+        features: 'tests/features/api/**/*.feature',
+        featuresRoot: 'tests/features',
+        steps: ['tests/steps/api/**/*.ts', ...SHARED_STEPS],
+      }),
+      use: {
+        baseURL: env.apiBaseUrl,
+        extraHTTPHeaders: { Accept: 'application/json' },
+      },
+    },
+  ],
+
+  webServer: env.startWebServer
+    ? {
+        command: env.webServerCommand,
+        url: env.appBaseUrl,
+        reuseExistingServer: !env.isCI,
+        timeout: 120_000,
+        stdout: 'ignore',
+        stderr: 'pipe',
+      }
+    : undefined,
+});

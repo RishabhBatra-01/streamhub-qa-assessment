@@ -17,6 +17,17 @@ app/dist/
 !.vscode/extensions.json
 .idea/
 
+# Test output (the final, published run is committed separately - see README)
+test-results/
+reports/
+.features-gen/
+playwright/.cache/
+
+# Environment files: only the shared, secret-free ones are committed
+config/environments/*.env
+!config/environments/local.env
+!config/environments/ci.env
+
 # Logs
 npm-debug.log*
 
