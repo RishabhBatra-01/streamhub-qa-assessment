@@ -49,3 +49,30 @@ from these notes.
   error thrown by the app fails the scenario even when its assertions pass.
 - **Note for Phase 6:** Playwright's `error-context.md` holds an accessibility snapshot of the page at the
   moment of failure, which is useful input for an AI locator-healing prompt.
+
+## Phase 3: UI tests
+
+- **Used for:** writing the feature files, page objects and step definitions, and the tests' own loan maths.
+- **The tests found a real app bug.** Pressing the slider's right-arrow key 4 times moved it only 2 steps.
+  A user holding the arrow key down would also lose steps. Root cause: React Router v8's `BrowserRouter`
+  renders URL changes in a React transition (low priority) unless `useTransitions={false}` is set. The
+  form inputs are bound to the URL, so after each key press React briefly restored the old value. This
+  was the _same root cause_ as the lost-dropdown bug in Phase 1. The Phase 1 fix (build updates from
+  `window.location`) had only treated the symptom. Fixed at the source in `app/src/main.tsx`, then the
+  scenario was re-run 5 times to confirm.
+- **Over-complicated code from the AI, rejected:** the first version of `DashboardPage.glanceValue()`
+  chained `.filter()`, `.and()` and an XPath parent lookup. It was hard to read and fragile, which goes
+  against the brief's locator guidance. Replaced with the existing `data-testid`s.
+- **Independent expected values, done properly:** `tests/utils/loanMath.ts` does not import app code, and
+  it uses a _different method_ (closed-form balance formula) from the app (month-by-month loop), so the
+  two implementations genuinely cross-check each other. The reference-value scenario adds literal figures
+  worked out separately, guarding against a mistake shared by both.
+- **Rounding tolerance chosen deliberately:** a first draft allowed "within ₹1". That was tightened to
+  "correctly rounded to the nearest rupee" (`toBeCloseTo(x, 0)`, i.e. within ₹0.50), so a real
+  off-by-one-rupee bug would not slip through.
+- **Proved the tests can fail:** a deliberate 0.1% error was injected into the app's EMI formula (about
+  ₹33 on a ₹33,038 EMI) and then reverted. 22 of 41 UI scenarios failed: every scenario that checks
+  numbers. The 19 that passed only check navigation, page structure and validation messages, as
+  expected.
+- **Flakiness check:** the full UI suite was run 3 times in a row (123 runs, all passed), and once
+  against the production build in CI mode.

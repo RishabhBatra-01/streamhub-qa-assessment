@@ -1,10 +1,37 @@
 import type { APIResponse } from '@playwright/test';
+import type { LoanTypeName } from '../pages/DashboardPage';
+import type { FirstEmi, Loan } from '../utils/loanMath';
 
 /**
  * State shared between the steps of ONE scenario (a fresh instance per scenario),
- * e.g. the response of a "When I send ..." step that later "Then ..." steps check.
+ * e.g. the loan a "When I enter ..." step typed in, or the response of a request step,
+ * which later "Then ..." steps check.
  */
 export class ScenarioContext {
+  /** The selected loan-type tab; the calculator opens on Home Loan. */
+  loanType: LoanTypeName = 'Home Loan';
+  private enteredLoan?: Loan;
+  private firstEmiMonth?: FirstEmi;
+
+  set loan(loan: Loan) {
+    this.enteredLoan = loan;
+  }
+
+  get loan(): Loan {
+    if (!this.enteredLoan) throw new Error('No loan entered yet: a step that enters a loan must run first.');
+    return this.enteredLoan;
+  }
+
+  set firstEmi(firstEmi: FirstEmi) {
+    this.firstEmiMonth = firstEmi;
+  }
+
+  get firstEmi(): FirstEmi {
+    if (!this.firstEmiMonth)
+      throw new Error('No EMI start month set yet: a step that sets it must run first.');
+    return this.firstEmiMonth;
+  }
+
   private response?: APIResponse;
   private responseBody?: string;
 

@@ -12,9 +12,10 @@ export function useLoanParams() {
    * Updates the query string, starting from the browser's *current* URL.
    *
    * React Router's own functional setSearchParams starts from the params of the
-   * last render, and its navigations render in a transition. Two quick changes in
-   * a row (e.g. an automated test picking two dropdowns) could then overwrite each
-   * other. The browser URL is updated synchronously, so it is always the latest.
+   * last render. If two changes arrive before a render (e.g. an automated test
+   * picking two dropdowns quickly), the second would overwrite the first. The
+   * browser URL is updated synchronously, so it is always the latest.
+   * (main.tsx also turns off router transitions so renders happen immediately.)
    */
   const updateParams = useCallback(
     (update: (current: URLSearchParams) => URLSearchParams) => {

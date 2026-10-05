@@ -2,6 +2,7 @@ import type { Page, TestInfo } from '@playwright/test';
 import { createBdd, test as base } from 'playwright-bdd';
 import { PostsApiClient } from '../api/PostsApiClient';
 import { DashboardPage } from '../pages/DashboardPage';
+import { SchedulePage } from '../pages/SchedulePage';
 import { ScenarioContext } from './ScenarioContext';
 
 interface Fixtures {
@@ -10,6 +11,7 @@ interface Fixtures {
   /** Collects uncaught errors from the page; a UI scenario fails if the app throws. */
   pageErrors: string[];
   dashboardPage: DashboardPage;
+  schedulePage: SchedulePage;
   postsApi: PostsApiClient;
 }
 
@@ -39,9 +41,14 @@ export const test = base.extend<Fixtures>({
     await use(errors);
     await attachPageErrors(page, testInfo, errors);
   },
+  // Page objects depend on `pageErrors` so that every UI scenario is guarded against app errors.
   dashboardPage: async ({ page, pageErrors }, use) => {
     void pageErrors;
     await use(new DashboardPage(page));
+  },
+  schedulePage: async ({ page, pageErrors }, use) => {
+    void pageErrors;
+    await use(new SchedulePage(page));
   },
   postsApi: async ({ request }, use) => {
     await use(new PostsApiClient(request));
