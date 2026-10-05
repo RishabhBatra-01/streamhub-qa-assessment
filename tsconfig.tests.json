@@ -11,11 +11,12 @@
     "isolatedModules": true,
     "moduleDetection": "force",
     "verbatimModuleSyntax": true,
+    "allowImportingTsExtensions": true,
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noUncheckedIndexedAccess": true
   },
-  "include": ["tests", "config", "playwright.config.ts"],
+  "include": ["tests", "config", "scripts", "playwright.config.ts"],
   "exclude": [".features-gen"]
 }

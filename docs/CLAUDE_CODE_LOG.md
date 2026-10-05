@@ -105,3 +105,27 @@ from these notes.
   a tag. The API base URL now gets a trailing slash, so relative paths work under any base path
   (`https://host/api/`). Cucumber has no "expected failure" status, so known-defect scenarios now carry an
   explicit "KNOWN DEFECT: this failure is expected" attachment in that report.
+
+## Phase 5: SQL
+
+- **Used for:** designing the schemas and edge-case seed data, the window-function ("gaps and islands")
+  query for the streaks, the BDD checks and the screenshot rendering.
+- **Data designed backwards from the rules.** Every rule and assumption (exactly 10%, exactly 24 hours,
+  return before original, two qualifying returns, exactly 30 runs, a 29, a missed match, a run crossing
+  from 2023 into 2024) has its own commented block in `seed.sql`, and its own named rule check in the
+  feature file.
+- **A database quirk found through the screenshots:** the schema screenshot showed `team_code TEXT PRIMARY
+KEY` as nullable. SQLite, unlike most databases, allows NULL in a non-INTEGER primary key. A quick check
+  confirmed that an account with a NULL id was accepted. Fixed with explicit `NOT NULL`, and covered by
+  new constraint tests.
+- **Strict SQLite caught a habit:** Node's bundled SQLite rejects double-quoted string literals. The first
+  probe used `"x"` for a string, which other SQLite builds silently accept, and it failed. All SQL now
+  uses standard single quotes.
+- **Step wording bug:** `streak(s)` in a Cucumber expression means "streak or streaks", so the literal text
+  "1 streak(s)" in the feature did not match. The step was reworded.
+- **Proved the checks catch real mistakes:** five common SQL bugs were each injected and reverted
+  (exclusive 24h window, exclusive 10% bound, return allowed before the original, missing season filter,
+  `> 30` instead of `>= 30`). Each one made 2–3 named rule checks fail.
+- **Over-claim removed:** a first draft of `sql/README.md` said the streak query "runs unchanged on
+  PostgreSQL, MySQL and SQL Server". That had not been tested, so it was reworded to say it has only
+  been run on SQLite.

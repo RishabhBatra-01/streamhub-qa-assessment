@@ -3,6 +3,7 @@ import { createBdd, test as base } from 'playwright-bdd';
 import { PostsApiClient } from '../api/PostsApiClient';
 import { DashboardPage } from '../pages/DashboardPage';
 import { SchedulePage } from '../pages/SchedulePage';
+import { SqlSession } from '../sql/SqlSession';
 import { ScenarioContext } from './ScenarioContext';
 
 interface Fixtures {
@@ -13,6 +14,8 @@ interface Fixtures {
   dashboardPage: DashboardPage;
   schedulePage: SchedulePage;
   postsApi: PostsApiClient;
+  /** A fresh in-memory SQLite database for one SQL scenario; closed afterwards. */
+  sql: SqlSession;
 }
 
 async function attachPageErrors(page: Page, testInfo: TestInfo, errors: string[]): Promise<void> {
@@ -26,7 +29,7 @@ async function attachPageErrors(page: Page, testInfo: TestInfo, errors: string[]
 
 /**
  * The project's `test`: Playwright's test plus page objects and API clients as fixtures.
- * Fixtures are created lazily, so API scenarios never launch a browser.
+ * Fixtures are created lazily, so API and SQL scenarios only launch a browser if a step needs one.
  */
 export const test = base.extend<Fixtures>({
   scenario: async ({}, use) => {
@@ -52,6 +55,11 @@ export const test = base.extend<Fixtures>({
   },
   postsApi: async ({ request }, use) => {
     await use(new PostsApiClient(request));
+  },
+  sql: async ({}, use) => {
+    const session = new SqlSession();
+    await use(session);
+    session.close();
   },
 });
 

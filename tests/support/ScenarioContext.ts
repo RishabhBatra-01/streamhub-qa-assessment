@@ -33,6 +33,8 @@ export class ScenarioContext {
     return this.firstEmiMonth;
   }
 
+  /** Error from a "When I try to run ..." SQL step (null if the statement succeeded). */
+  sqlError?: string | null;
   /** The request a "When I send ..." step sent, so "Then" steps can compare the echo. */
   sentPost?: PostRequest;
   private response?: APIResponse;

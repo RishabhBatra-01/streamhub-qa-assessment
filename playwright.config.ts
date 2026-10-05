@@ -64,6 +64,16 @@ export default defineConfig({
         extraHTTPHeaders: { Accept: 'application/json' },
       },
     },
+    {
+      ...defineBddProject({
+        name: 'sql',
+        features: 'tests/features/sql/**/*.feature',
+        featuresRoot: 'tests/features',
+        steps: ['tests/steps/sql/**/*.ts', ...SHARED_STEPS],
+      }),
+      // Screenshots of SQL output are rendered at 2x for crisp text.
+      use: { ...devices['Desktop Chrome'], deviceScaleFactor: 2 },
+    },
   ],
 
   webServer: env.startWebServer

@@ -5,7 +5,7 @@
   "description": "Loan Planner web app with a Playwright + Cucumber (BDD) test framework, API tests, SQL tests and an AI self-healing POC.",
   "type": "module",
   "engines": {
-    "node": ">=20"
+    "node": ">=22.18"
   },
   "scripts": {
     "dev": "vite --config app/vite.config.ts",
@@ -17,12 +17,14 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "bddgen": "bddgen",
-    "test": "bddgen && playwright test --project=ui --project=api",
+    "test": "bddgen && playwright test --project=ui --project=api --project=sql",
     "test:ui": "bddgen && playwright test --project=ui",
     "test:api": "bddgen && playwright test --project=api",
-    "test:smoke": "bddgen && playwright test --project=ui --project=api --grep @smoke",
+    "test:smoke": "bddgen && playwright test --project=ui --project=api --project=sql --grep @smoke",
     "report": "playwright show-report reports/playwright-html",
-    "playwright:install": "playwright install --with-deps chromium"
+    "playwright:install": "playwright install --with-deps chromium",
+    "test:sql": "bddgen && playwright test --project=sql",
+    "sql": "node scripts/run-sql.ts"
   },
   "dependencies": {
     "react": "^19.3.0",
