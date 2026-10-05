@@ -5,19 +5,37 @@
         "role": "spinbutton",
         "name": "Interest Rate"
       },
-      "confidence": 1,
-      "reason": "same name \"Interest Rate\" but role \"spinbutton\" (the old role \"textbox\" was wrong)"
+      "confidence": 0.97,
+      "reason": "The tree shows exactly one spinbutton with the accessible name \"Interest Rate\" inside the \"Loan details\" form holding the value 9, and the sibling slider has the distinct name \"Interest Rate slider\" so there is no ambiguity."
     },
     {
       "spec": {
-        "role": "slider",
-        "name": "Interest Rate slider"
+        "label": "Interest Rate"
       },
-      "confidence": 0.6666666666666666,
-      "reason": "\"Interest Rate slider\" shares words with the intent"
+      "confidence": 0.72,
+      "reason": "The number box is labelled by the \"Interest Rate\" text in the form, so an exact label match resolves to it, though a substring match would also pick up the \"Interest Rate slider\" control."
     }
   ],
   "raw": {
-    "considered": 2
+    "models": [
+      "claude-opus-5[1m]"
+    ],
+    "costUsd": 0.046546,
+    "durationMs": 11529,
+    "candidates": [
+      {
+        "strategy": "role",
+        "value": "spinbutton",
+        "name": "Interest Rate",
+        "confidence": 0.97,
+        "reason": "The tree shows exactly one spinbutton with the accessible name \"Interest Rate\" inside the \"Loan details\" form holding the value 9, and the sibling slider has the distinct name \"Interest Rate slider\" so there is no ambiguity."
+      },
+      {
+        "strategy": "label",
+        "value": "Interest Rate",
+        "confidence": 0.72,
+        "reason": "The number box is labelled by the \"Interest Rate\" text in the form, so an exact label match resolves to it, though a substring match would also pick up the \"Interest Rate slider\" control."
+      }
+    ]
   }
 }

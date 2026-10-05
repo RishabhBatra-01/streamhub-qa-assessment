@@ -172,3 +172,14 @@ KEY` as nullable. SQLite, unlike most databases, allows NULL in a non-INTEGER pr
   116/116 in the Playwright report; 95 passed + 21 known defects (each with its note and defect tag) in the
   Cucumber report.
 - **Links verified:** all 94 relative links in the Markdown files resolve.
+
+## Phase 6 follow-up: the real AI run
+
+- After `claude auth login`, a probe confirmed the headless call returns the schema-validated answer in
+  `structured_output` (the field the provider reads) before the full run.
+- `npm run self-heal` with Claude Code (Opus 5): **5/5 healed, every one with the model's first-ranked
+  candidate**, then the regression run passed. The model's reasons were page-specific (input box "not the
+  adjacent slider", the value "not the surrounding summary card"), and it flagged its own text-based backup
+  as brittle. The non-AI matcher needed a second candidate twice.
+- About 70 s of model time and about $0.30 API-equivalent for 5 prompts. `results/` and the committed example
+  run were regenerated from one complete run.

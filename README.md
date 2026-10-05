@@ -238,7 +238,9 @@ a fix.
   falls back to a non-AI matcher and says so.
 - **Shown not to hide bugs:** with the EMI card removed from the app, the healer returned no fix for it.
 
-Example run: [docs/self-healing/example-run/healing-report.md](docs/self-healing/example-run/healing-report.md).
+**Result with Claude Code (Opus 5):** the model's first-ranked fix was correct for **all 5** locators, and each
+passed replay and the regression run. It also explained its choices, e.g. matching the input box "not the
+adjacent slider". Example run: [docs/self-healing/example-run/healing-report.md](docs/self-healing/example-run/healing-report.md).
 
 ## 10. CI
 
@@ -301,8 +303,9 @@ log of what it did, what it got wrong and how each problem was caught is in
   in the healer's matcher; a doc that silently contained the invisible U+202E character it was describing.
 - **Over-claiming:** "10x smaller" (measured: 4x) and "runs unchanged on PostgreSQL/MySQL" (untested). Both
   were corrected. The lesson I took: every claim needs a run or a measurement behind it.
-- **Environment limits:** the command-line Claude was logged out, so the healer was built with a clearly
-  reported non-AI fallback rather than pretending to use AI.
+- **Environment limits:** the command-line Claude was logged out at first, so the healer was built with a
+  clearly reported non-AI fallback rather than pretending to use AI. After logging in, the real AI run healed
+  all 5 locators at the first attempt, where the fallback needed a second try on two of them.
 
 ---
 

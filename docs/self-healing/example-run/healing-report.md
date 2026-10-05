@@ -2,8 +2,8 @@
 
 | | |
 | --- | --- |
-| **Run** | 2026-10-05T18:18:24.744Z → 2026-10-05T18:18:52.117Z |
-| **Provider** | heuristic (no AI) (auto: fell back to the non-AI matcher because `claude` is not logged in (run: claude auth login)) |
+| **Run** | 2026-10-05T18:37:33.440Z → 2026-10-05T18:39:04.596Z |
+| **Provider** | claude-code (auto: Claude Code is logged in) |
 | **Detection run** | 5 failed |
 | **Healed and validated** | **5 of 5** |
 | **Regression run (all fixes together)** | ✅ 5 passed |
@@ -76,7 +76,7 @@ the locator matching exactly one element. Candidates are tried in the order the 
 
 | # | Suggested locator | Confidence | Reason given | Validation |
 | --- | --- | --- | --- | --- |
-| 1 | `getByRole('spinbutton', { name: 'Interest Rate' })` | 1.00 | same name "Interest Rate" but role "spinbutton" (the old role "textbox" was wrong) | ✅ scenario passes; matched `<input>` "" |
+| 1 | `getByRole('spinbutton', { name: 'Interest Rate' })` | 0.97 | The tree shows exactly one spinbutton with the accessible name "Interest Rate" inside the "Loan details" form holding the value 9, and the sibling slider has the distinct name "Interest Rate slider" so there is no ambiguity. | ✅ scenario passes; matched `<input>` "" |
 
 ### `loanTenureInput`: ✅ healed → `getByRole('spinbutton', { name: 'Loan Tenure' })`
 
@@ -87,7 +87,7 @@ the locator matching exactly one element. Candidates are tried in the order the 
 
 | # | Suggested locator | Confidence | Reason given | Validation |
 | --- | --- | --- | --- | --- |
-| 1 | `getByRole('spinbutton', { name: 'Loan Tenure' })` | 1.00 | "Loan Tenure" shares words with the intent | ✅ scenario passes; matched `<input>` "" |
+| 1 | `getByRole('spinbutton', { name: 'Loan Tenure' })` | 0.97 | The accessibility tree shows exactly one spinbutton named "Loan Tenure" holding the value 5, which is the number box for tenure in years (the "Loan Tenure slider" is a separate slider role). | ✅ scenario passes; matched `<input>` "" |
 
 ### `monthlyEmi`: ✅ healed → `getByTestId('emi-value')`
 
@@ -98,8 +98,7 @@ the locator matching exactly one element. Candidates are tried in the order the 
 
 | # | Suggested locator | Confidence | Reason given | Validation |
 | --- | --- | --- | --- | --- |
-| 1 | `getByTestId('summary-emi')` | 0.90 | test id "summary-emi" shares words with the intent | ❌ scenario fails: Error: expect(locator).toHaveText(expected) failed |
-| 2 | `getByTestId('emi-value')` | 0.50 | test id "emi-value" shares words with the intent | ✅ scenario passes; matched `<dd>` "₹33,038" |
+| 1 | `getByTestId('emi-value')` | 0.96 | The dd carrying data-testid="emi-value" holds exactly the Monthly EMI amount (₹33,038) and is unique on the page, replacing the renamed monthly-emi test id. | ✅ scenario passes; matched `<dd>` "₹33,038" |
 
 ### `personalLoanTab`: ✅ healed → `getByRole('tab', { name: 'Personal Loan' })`
 
@@ -110,7 +109,7 @@ the locator matching exactly one element. Candidates are tried in the order the 
 
 | # | Suggested locator | Confidence | Reason given | Validation |
 | --- | --- | --- | --- | --- |
-| 1 | `getByRole('tab', { name: 'Personal Loan' })` | 1.00 | "Personal Loan" shares words with the intent | ✅ scenario passes; matched `<button>` "Personal Loan" |
+| 1 | `getByRole('tab', { name: 'Personal Loan' })` | 0.97 | The accessibility tree shows a single tab with the accessible name "Personal Loan" (singular) inside the "Loan type" tablist, so the original locator only failed because of the trailing "s". | ✅ scenario passes; matched `<button>` "Personal Loan" |
 
 ### `totalInterestValue`: ✅ healed → `getByTestId('total-interest-value')`
 
@@ -121,5 +120,4 @@ the locator matching exactly one element. Candidates are tried in the order the 
 
 | # | Suggested locator | Confidence | Reason given | Validation |
 | --- | --- | --- | --- | --- |
-| 1 | `getByTestId('summary-total-interest')` | 0.90 | test id "summary-total-interest" shares words with the intent | ❌ scenario fails: Error: expect(locator).toHaveText(expected) failed |
-| 2 | `getByTestId('total-interest-value')` | 0.90 | test id "total-interest-value" shares words with the intent | ✅ scenario passes; matched `<dd>` "₹14,64,522" |
+| 1 | `getByTestId('total-interest-value')` | 0.97 | The dd with data-testid="total-interest-value" is the single element holding the Total Interest Payable amount (₹14,64,522) inside the summary card, excluding both the surrounding card container and the pie-legend duplicate. | ✅ scenario passes; matched `<dd>` "₹14,64,522" |

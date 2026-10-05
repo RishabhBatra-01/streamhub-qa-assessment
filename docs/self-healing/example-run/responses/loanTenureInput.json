@@ -5,19 +5,37 @@
         "role": "spinbutton",
         "name": "Loan Tenure"
       },
-      "confidence": 1,
-      "reason": "\"Loan Tenure\" shares words with the intent"
+      "confidence": 0.97,
+      "reason": "The accessibility tree shows exactly one spinbutton named \"Loan Tenure\" holding the value 5, which is the number box for tenure in years (the \"Loan Tenure slider\" is a separate slider role)."
     },
     {
       "spec": {
-        "role": "slider",
-        "name": "Loan Tenure slider"
+        "label": "Loan Tenure"
       },
-      "confidence": 0.6666666666666666,
-      "reason": "\"Loan Tenure slider\" shares words with the intent"
+      "confidence": 0.6,
+      "reason": "The form field is labelled \"Loan Tenure\", and an exact label match distinguishes it from the companion control labelled \"Loan Tenure slider\"."
     }
   ],
   "raw": {
-    "considered": 2
+    "models": [
+      "claude-opus-5[1m]"
+    ],
+    "costUsd": 0.048401,
+    "durationMs": 10698,
+    "candidates": [
+      {
+        "strategy": "role",
+        "value": "spinbutton",
+        "name": "Loan Tenure",
+        "confidence": 0.97,
+        "reason": "The accessibility tree shows exactly one spinbutton named \"Loan Tenure\" holding the value 5, which is the number box for tenure in years (the \"Loan Tenure slider\" is a separate slider role)."
+      },
+      {
+        "strategy": "label",
+        "value": "Loan Tenure",
+        "confidence": 0.6,
+        "reason": "The form field is labelled \"Loan Tenure\", and an exact label match distinguishes it from the companion control labelled \"Loan Tenure slider\"."
+      }
+    ]
   }
 }

@@ -3,11 +3,11 @@ $ npx playwright test --project=self-heal --reporter=list
 
 Running 5 tests using 5 workers
 
-  ✘  1 [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:15:3 › Legacy page object with deliberately broken locators › Type the interest rate with the legacy page object @self-heal (5.8s)
-  ✘  2 [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:21:3 › Legacy page object with deliberately broken locators › Switch to a personal loan with the legacy page object @self-heal (5.8s)
-  ✘  3 [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:10:3 › Legacy page object with deliberately broken locators › Read the monthly EMI with the legacy page object @self-heal (5.8s)
-  ✘  5 [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:27:3 › Legacy page object with deliberately broken locators › Type the loan tenure with the legacy page object @self-heal (5.8s)
+  ✘  3 [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:15:3 › Legacy page object with deliberately broken locators › Type the interest rate with the legacy page object @self-heal (5.7s)
+  ✘  1 [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:21:3 › Legacy page object with deliberately broken locators › Switch to a personal loan with the legacy page object @self-heal (5.8s)
   ✘  4 [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:33:3 › Legacy page object with deliberately broken locators › Read the total interest with the legacy page object @self-heal (5.8s)
+  ✘  2 [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:27:3 › Legacy page object with deliberately broken locators › Type the loan tenure with the legacy page object @self-heal (5.8s)
+  ✘  5 [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:10:3 › Legacy page object with deliberately broken locators › Read the monthly EMI with the legacy page object @self-heal (5.8s)
 
 
   1) [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:10:3 › Legacy page object with deliberately broken locators › Read the monthly EMI with the legacy page object @self-heal › Then the legacy "monthly EMI" shows "₹33,038" 

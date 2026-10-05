@@ -5,11 +5,37 @@
         "role": "tab",
         "name": "Personal Loan"
       },
-      "confidence": 1,
-      "reason": "\"Personal Loan\" shares words with the intent"
+      "confidence": 0.97,
+      "reason": "The accessibility tree shows a single tab with the accessible name \"Personal Loan\" (singular) inside the \"Loan type\" tablist, so the original locator only failed because of the trailing \"s\"."
+    },
+    {
+      "spec": {
+        "text": "Personal Loan"
+      },
+      "confidence": 0.6,
+      "reason": "Fallback if the role is ever dropped: the exact string \"Personal Loan\" appears only on that tab (the glance panel shows \"Home Loan\" and the intro paragraph uses lowercase \"personal\"), though the role-based locator is stronger because the element does have a role."
     }
   ],
   "raw": {
-    "considered": 1
+    "models": [
+      "claude-opus-5[1m]"
+    ],
+    "costUsd": 0.048200999999999994,
+    "durationMs": 11695,
+    "candidates": [
+      {
+        "strategy": "role",
+        "value": "tab",
+        "name": "Personal Loan",
+        "confidence": 0.97,
+        "reason": "The accessibility tree shows a single tab with the accessible name \"Personal Loan\" (singular) inside the \"Loan type\" tablist, so the original locator only failed because of the trailing \"s\"."
+      },
+      {
+        "strategy": "text",
+        "value": "Personal Loan",
+        "confidence": 0.6,
+        "reason": "Fallback if the role is ever dropped: the exact string \"Personal Loan\" appears only on that tab (the glance panel shows \"Home Loan\" and the intro paragraph uses lowercase \"personal\"), though the role-based locator is stronger because the element does have a role."
+      }
+    ]
   }
 }

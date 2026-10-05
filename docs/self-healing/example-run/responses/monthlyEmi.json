@@ -2,20 +2,38 @@
   "suggestions": [
     {
       "spec": {
-        "testId": "summary-emi"
+        "testId": "emi-value"
       },
-      "confidence": 0.9,
-      "reason": "test id \"summary-emi\" shares words with the intent"
+      "confidence": 0.96,
+      "reason": "The dd carrying data-testid=\"emi-value\" holds exactly the Monthly EMI amount (₹33,038) and is unique on the page, replacing the renamed monthly-emi test id."
     },
     {
       "spec": {
-        "testId": "emi-value"
+        "text": "₹33,038"
       },
-      "confidence": 0.5,
-      "reason": "test id \"emi-value\" shares words with the intent"
+      "confidence": 0.45,
+      "reason": "Exact visible text matches only the EMI dd (the surrounding card's text also includes the label and caption), but it is brittle because it hard-codes a value that changes with the loan inputs."
     }
   ],
   "raw": {
-    "considered": 2
+    "models": [
+      "claude-opus-5[1m]"
+    ],
+    "costUsd": 0.052651,
+    "durationMs": 15671,
+    "candidates": [
+      {
+        "strategy": "testId",
+        "value": "emi-value",
+        "confidence": 0.96,
+        "reason": "The dd carrying data-testid=\"emi-value\" holds exactly the Monthly EMI amount (₹33,038) and is unique on the page, replacing the renamed monthly-emi test id."
+      },
+      {
+        "strategy": "text",
+        "value": "₹33,038",
+        "confidence": 0.45,
+        "reason": "Exact visible text matches only the EMI dd (the surrounding card's text also includes the label and caption), but it is brittle because it hard-codes a value that changes with the loan inputs."
+      }
+    ]
   }
 }

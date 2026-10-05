@@ -1,6 +1,6 @@
 $ node scripts/self-heal/heal.ts
 
-Self-healing POC · provider: heuristic (no AI) (auto: fell back to the non-AI matcher because `claude` is not logged in (run: claude auth login)) · dry run
+Self-healing POC · provider: claude-code (auto: Claude Code is logged in) · dry run
 
 1. DETECT: running the @self-heal scenarios…
    5 failed; 5 broken locator(s) recorded
@@ -14,15 +14,13 @@ Self-healing POC · provider: heuristic (no AI) (auto: fell back to the non-AI m
   candidate 1: getByRole('spinbutton', { name: 'Loan Tenure' }) → ✓ scenario passes
 
 ▶ monthlyEmi: getByTestId('monthly-emi') matched 0 element(s)
-  candidate 1: getByTestId('summary-emi') → ✗ Error: expect(locator).toHaveText(expected) failed
-  candidate 2: getByTestId('emi-value') → ✓ scenario passes
+  candidate 1: getByTestId('emi-value') → ✓ scenario passes
 
 ▶ personalLoanTab: getByRole('tab', { name: 'Personal Loans' }) matched 0 element(s)
   candidate 1: getByRole('tab', { name: 'Personal Loan' }) → ✓ scenario passes
 
 ▶ totalInterestValue: locator('div.summary-card.interest > span.amount') matched 0 element(s)
-  candidate 1: getByTestId('summary-total-interest') → ✗ Error: expect(locator).toHaveText(expected) failed
-  candidate 2: getByTestId('total-interest-value') → ✓ scenario passes
+  candidate 1: getByTestId('total-interest-value') → ✓ scenario passes
 
 4. REGRESS: all @self-heal scenarios with every chosen fix…
    5 passed

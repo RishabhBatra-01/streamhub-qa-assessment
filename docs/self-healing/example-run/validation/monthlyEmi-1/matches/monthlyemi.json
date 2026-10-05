@@ -1,13 +1,13 @@
 {
   "key": "monthlyEmi",
   "spec": {
-    "testId": "summary-emi"
+    "testId": "emi-value"
   },
-  "specText": "getByTestId('summary-emi')",
+  "specText": "getByTestId('emi-value')",
   "overridden": true,
   "element": {
-    "tag": "div",
-    "text": "Monthly EMI₹33,038Equated monthly instalment",
-    "ariaSnapshot": "- term: Monthly EMI\n- definition: ₹33,038\n- definition: Equated monthly instalment"
+    "tag": "dd",
+    "text": "₹33,038",
+    "ariaSnapshot": "- definition: ₹33,038"
   }
 }

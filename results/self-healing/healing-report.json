@@ -1,8 +1,8 @@
 {
-  "startedAt": "2026-10-05T18:25:37.660Z",
-  "finishedAt": "2026-10-05T18:26:05.310Z",
-  "provider": "heuristic (no AI)",
-  "providerNote": "auto: fell back to the non-AI matcher because `claude` is not logged in (run: claude auth login)",
+  "startedAt": "2026-10-05T18:37:33.440Z",
+  "finishedAt": "2026-10-05T18:39:04.596Z",
+  "provider": "claude-code",
+  "providerNote": "auto: Claude Code is logged in",
   "registryFile": "tests/self-heal/legacyLocators.ts",
   "detection": "5 failed",
   "outcomes": [
@@ -125,7 +125,7 @@
           }
         ],
         "screenshotFile": "reports/self-heal/screenshots/interestrateinput.png",
-        "recordedAt": "2026-10-05T18:25:45.046Z"
+        "recordedAt": "2026-10-05T18:37:40.739Z"
       },
       "promptFile": "reports/self-heal/prompts/interestRateInput.md",
       "candidates": [
@@ -134,8 +134,8 @@
             "role": "spinbutton",
             "name": "Interest Rate"
           },
-          "confidence": 1,
-          "reason": "same name \"Interest Rate\" but role \"spinbutton\" (the old role \"textbox\" was wrong)",
+          "confidence": 0.97,
+          "reason": "The tree shows exactly one spinbutton with the accessible name \"Interest Rate\" inside the \"Loan details\" form holding the value 9, and the sibling slider has the distinct name \"Interest Rate slider\" so there is no ambiguity.",
           "validation": {
             "passed": true,
             "summary": "1 passed",
@@ -279,7 +279,7 @@
           }
         ],
         "screenshotFile": "reports/self-heal/screenshots/loantenureinput.png",
-        "recordedAt": "2026-10-05T18:25:45.059Z"
+        "recordedAt": "2026-10-05T18:37:40.766Z"
       },
       "promptFile": "reports/self-heal/prompts/loanTenureInput.md",
       "candidates": [
@@ -288,8 +288,8 @@
             "role": "spinbutton",
             "name": "Loan Tenure"
           },
-          "confidence": 1,
-          "reason": "\"Loan Tenure\" shares words with the intent",
+          "confidence": 0.97,
+          "reason": "The accessibility tree shows exactly one spinbutton named \"Loan Tenure\" holding the value 5, which is the number box for tenure in years (the \"Loan Tenure slider\" is a separate slider role).",
           "validation": {
             "passed": true,
             "summary": "1 passed",
@@ -433,41 +433,16 @@
           }
         ],
         "screenshotFile": "reports/self-heal/screenshots/monthlyemi.png",
-        "recordedAt": "2026-10-05T18:25:45.085Z"
+        "recordedAt": "2026-10-05T18:37:40.785Z"
       },
       "promptFile": "reports/self-heal/prompts/monthlyEmi.md",
       "candidates": [
         {
           "spec": {
-            "testId": "summary-emi"
-          },
-          "confidence": 0.9,
-          "reason": "test id \"summary-emi\" shares words with the intent",
-          "validation": {
-            "passed": false,
-            "summary": "1 failed",
-            "failure": "Error: expect(locator).toHaveText(expected) failed",
-            "match": {
-              "key": "monthlyEmi",
-              "spec": {
-                "testId": "summary-emi"
-              },
-              "specText": "getByTestId('summary-emi')",
-              "overridden": true,
-              "element": {
-                "tag": "div",
-                "text": "Monthly EMI₹33,038Equated monthly instalment",
-                "ariaSnapshot": "- term: Monthly EMI\n- definition: ₹33,038\n- definition: Equated monthly instalment"
-              }
-            }
-          }
-        },
-        {
-          "spec": {
             "testId": "emi-value"
           },
-          "confidence": 0.5,
-          "reason": "test id \"emi-value\" shares words with the intent",
+          "confidence": 0.96,
+          "reason": "The dd carrying data-testid=\"emi-value\" holds exactly the Monthly EMI amount (₹33,038) and is unique on the page, replacing the renamed monthly-emi test id.",
           "validation": {
             "passed": true,
             "summary": "1 passed",
@@ -610,7 +585,7 @@
           }
         ],
         "screenshotFile": "reports/self-heal/screenshots/personalloantab.png",
-        "recordedAt": "2026-10-05T18:25:45.015Z"
+        "recordedAt": "2026-10-05T18:37:40.739Z"
       },
       "promptFile": "reports/self-heal/prompts/personalLoanTab.md",
       "candidates": [
@@ -619,8 +594,8 @@
             "role": "tab",
             "name": "Personal Loan"
           },
-          "confidence": 1,
-          "reason": "\"Personal Loan\" shares words with the intent",
+          "confidence": 0.97,
+          "reason": "The accessibility tree shows a single tab with the accessible name \"Personal Loan\" (singular) inside the \"Loan type\" tablist, so the original locator only failed because of the trailing \"s\".",
           "validation": {
             "passed": true,
             "summary": "1 passed",
@@ -764,41 +739,16 @@
           }
         ],
         "screenshotFile": "reports/self-heal/screenshots/totalinterestvalue.png",
-        "recordedAt": "2026-10-05T18:25:45.058Z"
+        "recordedAt": "2026-10-05T18:37:40.766Z"
       },
       "promptFile": "reports/self-heal/prompts/totalInterestValue.md",
       "candidates": [
         {
           "spec": {
-            "testId": "summary-total-interest"
-          },
-          "confidence": 0.9,
-          "reason": "test id \"summary-total-interest\" shares words with the intent",
-          "validation": {
-            "passed": false,
-            "summary": "1 failed",
-            "failure": "Error: expect(locator).toHaveText(expected) failed",
-            "match": {
-              "key": "totalInterestValue",
-              "spec": {
-                "testId": "summary-total-interest"
-              },
-              "specText": "getByTestId('summary-total-interest')",
-              "overridden": true,
-              "element": {
-                "tag": "div",
-                "text": "Total Interest Payable₹14,64,522Over the full tenure",
-                "ariaSnapshot": "- term: Total Interest Payable\n- definition: ₹14,64,522\n- definition: Over the full tenure"
-              }
-            }
-          }
-        },
-        {
-          "spec": {
             "testId": "total-interest-value"
           },
-          "confidence": 0.9,
-          "reason": "test id \"total-interest-value\" shares words with the intent",
+          "confidence": 0.97,
+          "reason": "The dd with data-testid=\"total-interest-value\" is the single element holding the Total Interest Payable amount (₹14,64,522) inside the summary card, excluding both the surrounding card container and the pie-legend duplicate.",
           "validation": {
             "passed": true,
             "summary": "1 passed",

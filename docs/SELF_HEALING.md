@@ -190,12 +190,28 @@ report shows every candidate and why it was accepted or rejected, including the 
 ## 7. Results
 
 The committed example run in [`docs/self-healing/example-run/`](self-healing/example-run) is a real run of
-the POC. Its [healing report](self-healing/example-run/healing-report.md) shows every prompt, the ranked
-candidates, the validation outcome and the final patch.
+`npm run self-heal` with **Claude Code (Claude Opus 5) as the provider**. Its
+[healing report](self-healing/example-run/healing-report.md) shows every prompt, the ranked candidates with
+the model's reasons, the validation outcome and the final patch.
 
-> **Provider used for the committed run:** see the report header. The AI path (`claude -p`) needs the Claude
-> CLI to be logged in on the machine running it. Without a login, `--provider auto` falls back to the
-> non-AI matcher and says so in the report.
+**The AI's first-ranked suggestion was correct for all five locators**, and each one passed replay:
+
+| Locator              | Claude's first choice (confidence)                          | Its reasoning, in short                                                   | Backup it offered                                             |
+| -------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| `interestRateInput`  | `getByRole('spinbutton', { name: 'Interest Rate' })` (0.96) | Only the role was wrong; the exact name avoids the "Interest Rate slider" | `getByLabel('Interest Rate')`                                 |
+| `loanTenureInput`    | `getByRole('spinbutton', { name: 'Loan Tenure' })` (0.96)   | Exact name excludes the adjacent "Loan Tenure slider"                     | `getByLabel('Loan Tenure')`                                   |
+| `monthlyEmi`         | `getByTestId('emi-value')` (0.95)                           | The value itself, "not the surrounding summary card"                      | text "₹33,038" (0.50), flagged by the model itself as brittle |
+| `personalLoanTab`    | `getByRole('tab', { name: 'Personal Loan' })` (0.97)        | Singular, not "Personal Loans"                                            | text "Personal Loan" (0.40)                                   |
+| `totalInterestValue` | `getByTestId('total-interest-value')` (0.97)                | The single element holding the amount, not the card                       | none                                                          |
+
+**AI compared with the non-AI fallback, on the same incidents:**
+
+|                                | Claude Code                                                                                           | Non-AI matcher                                                              |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Healed and validated           | 5 / 5                                                                                                 | 5 / 5                                                                       |
+| Correct at the first candidate | **5 / 5**                                                                                             | 3 / 5 (twice it first picked the whole summary card, which replay rejected) |
+| Explains its choice            | Yes, specific to the page                                                                             | Generic ("shares words with the intent")                                    |
+| Time and cost                  | about 70 s of model time for 5 prompts; about $0.30 API-equivalent (covered by a Claude subscription) | under 1 s, free                                                             |
 
 The proposed patch turns all five brittle or stale locators into resilient role or test-id locators:
 

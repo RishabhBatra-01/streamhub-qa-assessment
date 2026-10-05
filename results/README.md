@@ -51,5 +51,5 @@ status). Each carries a "KNOWN DEFECT: this failure is expected" attachment.
 | | |
 | --- | --- |
 | **Broken-locator scenarios** | ❌ fail, as intended (the locators are deliberately broken): [log](logs/self-heal-tests-expected-to-fail.log) |
-| **Healer** | 5/5 healed and validated · provider: heuristic (no AI) (auto: fell back to the non-AI matcher because `claude` is not logged in (run: claude auth login)) |
+| **Healer** | 5/5 healed and validated · provider: claude-code (auto: Claude Code is logged in) |
 | **Report** | [self-healing/healing-report.md](self-healing/healing-report.md) · [proposed patch](self-healing/locators.patch) |

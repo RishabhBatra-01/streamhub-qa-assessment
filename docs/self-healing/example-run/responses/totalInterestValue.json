@@ -2,27 +2,25 @@
   "suggestions": [
     {
       "spec": {
-        "testId": "summary-total-interest"
-      },
-      "confidence": 0.9,
-      "reason": "test id \"summary-total-interest\" shares words with the intent"
-    },
-    {
-      "spec": {
         "testId": "total-interest-value"
       },
-      "confidence": 0.9,
-      "reason": "test id \"total-interest-value\" shares words with the intent"
-    },
-    {
-      "spec": {
-        "testId": "summary-total-payment"
-      },
-      "confidence": 0.6666666666666666,
-      "reason": "test id \"summary-total-payment\" shares words with the intent"
+      "confidence": 0.97,
+      "reason": "The dd with data-testid=\"total-interest-value\" is the single element holding the Total Interest Payable amount (₹14,64,522) inside the summary card, excluding both the surrounding card container and the pie-legend duplicate."
     }
   ],
   "raw": {
-    "considered": 3
+    "models": [
+      "claude-opus-5[1m]"
+    ],
+    "costUsd": 0.052746,
+    "durationMs": 19732,
+    "candidates": [
+      {
+        "strategy": "testId",
+        "value": "total-interest-value",
+        "confidence": 0.97,
+        "reason": "The dd with data-testid=\"total-interest-value\" is the single element holding the Total Interest Payable amount (₹14,64,522) inside the summary card, excluding both the surrounding card container and the pie-legend duplicate."
+      }
+    ]
   }
 }
