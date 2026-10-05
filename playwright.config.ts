@@ -22,8 +22,14 @@ export default defineConfig({
     ['list'],
     ['html', { outputFolder: `${REPORTS_DIR}/playwright-html`, open: 'never' }],
     cucumberReporter('html', { outputFile: `${REPORTS_DIR}/cucumber/cucumber-report.html` }),
-    cucumberReporter('json', { outputFile: `${REPORTS_DIR}/cucumber/cucumber-report.json` }),
+    // Screenshots, videos and traces are already in both HTML reports; keep the JSON small.
+    cucumberReporter('json', {
+      outputFile: `${REPORTS_DIR}/cucumber/cucumber-report.json`,
+      skipAttachments: ['image/png', 'video/webm', 'application/zip'],
+    }),
     ['junit', { outputFile: `${REPORTS_DIR}/junit/results.xml` }],
+    // Machine-readable results, used by scripts/publish-results.ts to write the summary.
+    ['json', { outputFile: `${REPORTS_DIR}/results.json` }],
   ],
 
   use: {

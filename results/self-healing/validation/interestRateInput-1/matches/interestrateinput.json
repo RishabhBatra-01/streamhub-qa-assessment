@@ -1,0 +1,14 @@
+{
+  "key": "interestRateInput",
+  "spec": {
+    "role": "spinbutton",
+    "name": "Interest Rate"
+  },
+  "specText": "getByRole('spinbutton', { name: 'Interest Rate' })",
+  "overridden": true,
+  "element": {
+    "tag": "input",
+    "text": "",
+    "ariaSnapshot": "- spinbutton \"Interest Rate\": \"9\""
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "key": "totalInterestValue",
+  "spec": {
+    "testId": "total-interest-value"
+  },
+  "specText": "getByTestId('total-interest-value')",
+  "overridden": true,
+  "element": {
+    "tag": "dd",
+    "text": "₹14,64,522",
+    "ariaSnapshot": "- definition: ₹14,64,522"
+  }
+}

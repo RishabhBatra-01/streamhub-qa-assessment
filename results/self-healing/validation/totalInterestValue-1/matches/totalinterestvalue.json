@@ -1,0 +1,13 @@
+{
+  "key": "totalInterestValue",
+  "spec": {
+    "testId": "summary-total-interest"
+  },
+  "specText": "getByTestId('summary-total-interest')",
+  "overridden": true,
+  "element": {
+    "tag": "div",
+    "text": "Total Interest Payable₹14,64,522Over the full tenure",
+    "ariaSnapshot": "- term: Total Interest Payable\n- definition: ₹14,64,522\n- definition: Over the full tenure"
+  }
+}

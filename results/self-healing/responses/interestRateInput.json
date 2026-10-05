@@ -1,0 +1,23 @@
+{
+  "suggestions": [
+    {
+      "spec": {
+        "role": "spinbutton",
+        "name": "Interest Rate"
+      },
+      "confidence": 1,
+      "reason": "same name \"Interest Rate\" but role \"spinbutton\" (the old role \"textbox\" was wrong)"
+    },
+    {
+      "spec": {
+        "role": "slider",
+        "name": "Interest Rate slider"
+      },
+      "confidence": 0.6666666666666666,
+      "reason": "\"Interest Rate slider\" shares words with the intent"
+    }
+  ],
+  "raw": {
+    "considered": 2
+  }
+}

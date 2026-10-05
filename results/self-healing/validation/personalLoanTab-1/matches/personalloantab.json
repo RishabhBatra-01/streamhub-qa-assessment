@@ -1,0 +1,14 @@
+{
+  "key": "personalLoanTab",
+  "spec": {
+    "role": "tab",
+    "name": "Personal Loan"
+  },
+  "specText": "getByRole('tab', { name: 'Personal Loan' })",
+  "overridden": true,
+  "element": {
+    "tag": "button",
+    "text": "Personal Loan",
+    "ariaSnapshot": "- tab \"Personal Loan\""
+  }
+}

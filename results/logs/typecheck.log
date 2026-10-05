@@ -1,0 +1,6 @@
+$ npm run typecheck
+
+
+> streamhub-qa-assessment@1.0.0 typecheck
+> tsc -b
+

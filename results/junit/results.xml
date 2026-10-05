@@ -1,0 +1,1135 @@
+<testsuites id="" name="" tests="116" failures="0" skipped="0" errors="0" time="13.004928">
+<testsuite name=".features-gen/ui/ui/charts.feature.spec.js" timestamp="2026-10-05T18:25:17.849Z" hostname="ui" tests="5" failures="0" skipped="0" time="5.829" errors="0">
+<testcase name="Charts › The pie chart shows the principal and interest split for &lt;amount&gt; at &lt;rate&gt;% for &lt;tenure&gt; years › The pie chart shows the principal and interest split for 2500000 at 10% for 10 years" classname=".features-gen/ui/ui/charts.feature.spec.js" time="0.946">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-charts.feature-Charts-T-7cd60--2500000-at-10-for-10-years-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Charts › The pie chart shows the principal and interest split for &lt;amount&gt; at &lt;rate&gt;% for &lt;tenure&gt; years › The pie chart shows the principal and interest split for 5000000 at 7.5% for 15 years" classname=".features-gen/ui/ui/charts.feature.spec.js" time="0.944">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-charts.feature-Charts-T-5d88b-5000000-at-7-5-for-15-years-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Charts › The bar chart shows one bar per calendar year when the first EMI is in &lt;month&gt; &lt;year&gt; › The bar chart shows one bar per calendar year when the first EMI is in Jan 2026" classname=".features-gen/ui/ui/charts.feature.spec.js" time="1.395">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-charts.feature-Charts-T-5c345-he-first-EMI-is-in-Jan-2026-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Charts › The bar chart shows one bar per calendar year when the first EMI is in &lt;month&gt; &lt;year&gt; › The bar chart shows one bar per calendar year when the first EMI is in Jun 2026" classname=".features-gen/ui/ui/charts.feature.spec.js" time="1.355">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-charts.feature-Charts-T-5301f-he-first-EMI-is-in-Jun-2026-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Charts › The tooltip of a bar shows that year&apos;s figures" classname=".features-gen/ui/ui/charts.feature.spec.js" time="1.189">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-charts.feature-Charts-T-53e79-r-shows-that-year-s-figures-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name=".features-gen/ui/ui/dashboard.feature.spec.js" timestamp="2026-10-05T18:25:17.849Z" hostname="ui" tests="5" failures="0" skipped="0" time="3.792" errors="0">
+<testcase name="EMI calculator dashboard › The dashboard loads with its main sections" classname=".features-gen/ui/ui/dashboard.feature.spec.js" time="0.859">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-dashboard.feature-EMI-c-9e722-oads-with-its-main-sections-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculator dashboard › The &lt;loan type&gt; tab opens with its own default values › The Home Loan tab opens with its own default values" classname=".features-gen/ui/ui/dashboard.feature.spec.js" time="0.621">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-dashboard.feature-EMI-c-4d726-with-its-own-default-values-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculator dashboard › The &lt;loan type&gt; tab opens with its own default values › The Personal Loan tab opens with its own default values" classname=".features-gen/ui/ui/dashboard.feature.spec.js" time="0.713">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-dashboard.feature-EMI-c-9b163-with-its-own-default-values-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculator dashboard › The &lt;loan type&gt; tab opens with its own default values › The Car Loan tab opens with its own default values" classname=".features-gen/ui/ui/dashboard.feature.spec.js" time="0.719">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-dashboard.feature-EMI-c-435ae-with-its-own-default-values-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculator dashboard › The loan is kept when moving between the calculator and the schedule" classname=".features-gen/ui/ui/dashboard.feature.spec.js" time="0.88">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-dashboard.feature-EMI-c-8afb3-calculator-and-the-schedule-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name=".features-gen/ui/ui/emi-calculation.feature.spec.js" timestamp="2026-10-05T18:25:17.849Z" hostname="ui" tests="10" failures="0" skipped="0" time="7.236" errors="0">
+<testcase name="EMI calculation › Results match an independent calculation: &lt;loan type&gt;, &lt;amount&gt; at &lt;rate&gt;% for &lt;tenure&gt; years › Results match an independent calculation: Home Loan, 2500000 at 10% for 10 years" classname=".features-gen/ui/ui/emi-calculation.feature.spec.js" time="0.693">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-emi-calculation.feature-dcf5a--2500000-at-10-for-10-years-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculation › Results match an independent calculation: &lt;loan type&gt;, &lt;amount&gt; at &lt;rate&gt;% for &lt;tenure&gt; years › Results match an independent calculation: Home Loan, 5000000 at 7.5% for 15 years" classname=".features-gen/ui/ui/emi-calculation.feature.spec.js" time="0.724">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-emi-calculation.feature-23252-5000000-at-7-5-for-15-years-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculation › Results match an independent calculation: &lt;loan type&gt;, &lt;amount&gt; at &lt;rate&gt;% for &lt;tenure&gt; years › Results match an independent calculation: Personal Loan, 1000000 at 12% for 5 years" classname=".features-gen/ui/ui/emi-calculation.feature.spec.js" time="0.707">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-emi-calculation.feature-7c367-n-1000000-at-12-for-5-years-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculation › Results match an independent calculation: &lt;loan type&gt;, &lt;amount&gt; at &lt;rate&gt;% for &lt;tenure&gt; years › Results match an independent calculation: Car Loan, 800000 at 9.25% for 7 years" classname=".features-gen/ui/ui/emi-calculation.feature.spec.js" time="0.778">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-emi-calculation.feature-4282a--800000-at-9-25-for-7-years-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculation › Results match an independent calculation: &lt;loan type&gt;, &lt;amount&gt; at &lt;rate&gt;% for &lt;tenure&gt; years › Results match an independent calculation: Home Loan, 100000 at 5% for 1 years" classname=".features-gen/ui/ui/emi-calculation.feature.spec.js" time="0.76">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-emi-calculation.feature-e9ef6-oan-100000-at-5-for-1-years-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculation › Results match an independent calculation: &lt;loan type&gt;, &lt;amount&gt; at &lt;rate&gt;% for &lt;tenure&gt; years › Results match an independent calculation: Home Loan, 20000000 at 20% for 30 years" classname=".features-gen/ui/ui/emi-calculation.feature.spec.js" time="0.717">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-emi-calculation.feature-4aa9c-20000000-at-20-for-30-years-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculation › Results match known reference values: &lt;amount&gt; at &lt;rate&gt;% for &lt;tenure&gt; years › Results match known reference values: 2500000 at 10% for 10 years" classname=".features-gen/ui/ui/emi-calculation.feature.spec.js" time="0.704">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-emi-calculation.feature-aa993--2500000-at-10-for-10-years-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculation › Results match known reference values: &lt;amount&gt; at &lt;rate&gt;% for &lt;tenure&gt; years › Results match known reference values: 5000000 at 7.5% for 15 years" classname=".features-gen/ui/ui/emi-calculation.feature.spec.js" time="0.678">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-emi-calculation.feature-ce973-5000000-at-7-5-for-15-years-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculation › The loan at a glance matches the loan entered" classname=".features-gen/ui/ui/emi-calculation.feature.spec.js" time="0.718">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-emi-calculation.feature-2650b-ce-matches-the-loan-entered-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="EMI calculation › Moving a slider with the keyboard updates the number box and the results" classname=".features-gen/ui/ui/emi-calculation.feature.spec.js" time="0.757">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-emi-calculation.feature-cc1f4--number-box-and-the-results-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name=".features-gen/ui/ui/input-validation.feature.spec.js" timestamp="2026-10-05T18:25:17.849Z" hostname="ui" tests="17" failures="0" skipped="0" time="11.067" errors="0">
+<testcase name="Input validation › &quot;&lt;value&gt;&quot; is rejected in the &lt;field&gt; box › &quot;99999&quot; is rejected in the Home Loan Amount box" classname=".features-gen/ui/ui/input-validation.feature.spec.js" time="0.684">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-input-validation.featur-9c06f-in-the-Home-Loan-Amount-box-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Input validation › &quot;&lt;value&gt;&quot; is rejected in the &lt;field&gt; box › &quot;20000001&quot; is rejected in the Home Loan Amount box" classname=".features-gen/ui/ui/input-validation.feature.spec.js" time="0.548">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-input-validation.featur-d0d8e-in-the-Home-Loan-Amount-box-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Input validation › &quot;&lt;value&gt;&quot; is rejected in the &lt;field&gt; box › &quot;&quot; is rejected in the Home Loan Amount box" classname=".features-gen/ui/ui/input-validation.feature.spec.js" time="0.647">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-input-validation.featur-07ed5-in-the-Home-Loan-Amount-box-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Input validation › &quot;&lt;value&gt;&quot; is rejected in the &lt;field&gt; box › &quot;4.99&quot; is rejected in the Interest Rate box" classname=".features-gen/ui/ui/input-validation.feature.spec.js" time="0.667">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-input-validation.featur-2b683-ed-in-the-Interest-Rate-box-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Input validation › &quot;&lt;value&gt;&quot; is rejected in the &lt;field&gt; box › &quot;20.01&quot; is rejected in the Interest Rate box" classname=".features-gen/ui/ui/input-validation.feature.spec.js" time="0.699">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-input-validation.featur-2781e-ed-in-the-Interest-Rate-box-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Input validation › &quot;&lt;value&gt;&quot; is rejected in the &lt;field&gt; box › &quot;7.555&quot; is rejected in the Interest Rate box" classname=".features-gen/ui/ui/input-validation.feature.spec.js" time="0.655">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-input-validation.featur-cf964-ed-in-the-Interest-Rate-box-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Input validation › &quot;&lt;value&gt;&quot; is rejected in the &lt;field&gt; box › &quot;0&quot; is rejected in the Loan Tenure box" classname=".features-gen/ui/ui/input-validation.feature.spec.js" time="0.64">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-input-validation.featur-cb8da-cted-in-the-Loan-Tenure-box-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Input validation › &quot;&lt;value&gt;&quot; is rejected in the &lt;field&gt; box › &quot;-5&quot; is rejected in the Loan Tenure box" classname=".features-gen/ui/ui/input-validation.feature.spec.js" time="0.636">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-input-validation.featur-3465b-cted-in-the-Loan-Tenure-box-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Input validation › &quot;&lt;value&gt;&quot; is rejected in the &lt;field&gt; box › &quot;2.5&quot; is rejected in the Loan Tenure box" classname=".features-gen/ui/ui/input-validation.feature.spec.js" time="0.652">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-input-validation.featur-31edc-cted-in-the-Loan-Tenure-box-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Input validation › The boundary value &lt;value&gt; is accepted in the &lt;field&gt; box › The boundary value 100000 is accepted in the Home Loan Amount box" classname=".features-gen/ui/ui/input-validation.feature.spec.js" time="0.636">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-input-validation.featur-477e9-in-the-Home-Loan-Amount-box-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Input validation › The boundary value &lt;value&gt; is accepted in the &lt;field&gt; box › The boundary value 20000000 is accepted in the Home Loan Amount box" classname=".features-gen/ui/ui/input-validation.feature.spec.js" time="0.69">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-input-validation.featur-341e2-in-the-Home-Loan-Amount-box-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Input validation › The boundary value &lt;value&gt; is accepted in the &lt;field&gt; box › The boundary value 5 is accepted in the Interest Rate box" classname=".features-gen/ui/ui/input-validation.feature.spec.js" time="0.623">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-input-validation.featur-100d9-ed-in-the-Interest-Rate-box-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Input validation › The boundary value &lt;value&gt; is accepted in the &lt;field&gt; box › The boundary value 20 is accepted in the Interest Rate box" classname=".features-gen/ui/ui/input-validation.feature.spec.js" time="0.65">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-input-validation.featur-f0cdb-ed-in-the-Interest-Rate-box-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Input validation › The boundary value &lt;value&gt; is accepted in the &lt;field&gt; box › The boundary value 1 is accepted in the Loan Tenure box" classname=".features-gen/ui/ui/input-validation.feature.spec.js" time="0.645">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-input-validation.featur-f5469-pted-in-the-Loan-Tenure-box-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Input validation › The boundary value &lt;value&gt; is accepted in the &lt;field&gt; box › The boundary value 30 is accepted in the Loan Tenure box" classname=".features-gen/ui/ui/input-validation.feature.spec.js" time="0.654">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-input-validation.featur-63ebb-pted-in-the-Loan-Tenure-box-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Input validation › Two invalid boxes are both reported" classname=".features-gen/ui/ui/input-validation.feature.spec.js" time="0.719">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-input-validation.featur-2ddee-lid-boxes-are-both-reported-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Input validation › Correcting an invalid value brings the results back" classname=".features-gen/ui/ui/input-validation.feature.spec.js" time="0.622">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-input-validation.featur-973a5-lue-brings-the-results-back-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name=".features-gen/ui/ui/payment-schedule.feature.spec.js" timestamp="2026-10-05T18:25:17.849Z" hostname="ui" tests="4" failures="0" skipped="0" time="4.142" errors="0">
+<testcase name="Payment schedule report › The report loads for the loan entered on the calculator" classname=".features-gen/ui/ui/payment-schedule.feature.spec.js" time="0.886">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-payment-schedule.featur-37884-n-entered-on-the-calculator-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Payment schedule report › The year-wise table matches an independent calculation" classname=".features-gen/ui/ui/payment-schedule.feature.spec.js" time="1.035">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-payment-schedule.featur-5afce--an-independent-calculation-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Payment schedule report › Choosing a year shows its month-wise breakdown" classname=".features-gen/ui/ui/payment-schedule.feature.spec.js" time="1.033">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-payment-schedule.featur-19d31-ws-its-month-wise-breakdown-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Payment schedule report › The schedule survives a page reload, so it can be shared as a link" classname=".features-gen/ui/ui/payment-schedule.feature.spec.js" time="1.188">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/ui-payment-schedule.featur-cf5d4--it-can-be-shared-as-a-link-ui/test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name=".features-gen/api/api/create-post.feature.spec.js" timestamp="2026-10-05T18:25:17.849Z" hostname="api" tests="43" failures="0" skipped="0" time="34.229" errors="0">
+<testcase name="Creating posts with boundary and invalid data › A valid post is created (control case)" classname=".features-gen/api/api/create-post.feature.spec.js" time="1.069">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › An excessively long title does not cause a server error: &lt;case&gt; › An excessively long title does not cause a server error: a 256-character title" classname=".features-gen/api/api/create-post.feature.spec.js" time="1.099">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › An excessively long title does not cause a server error: &lt;case&gt; › An excessively long title does not cause a server error: a 10,000-character title" classname=".features-gen/api/api/create-post.feature.spec.js" time="1.127">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › An excessively long title does not cause a server error: &lt;case&gt; › An excessively long title does not cause a server error: a 100,000-character title" classname=".features-gen/api/api/create-post.feature.spec.js" time="1.471">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › An excessively long title does not cause a server error: &lt;case&gt; › An excessively long title does not cause a server error: a 1,000,000-character title" classname=".features-gen/api/api/create-post.feature.spec.js" time="2.566">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › An excessively long title is rejected with a client error: &lt;case&gt; › An excessively long title is rejected with a client error: a 256-character title" classname=".features-gen/api/api/create-post.feature.spec.js" time="1.028">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-002: expected to fail until fixed. See docs/API_DEFECTS.md#api-002">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-8132c-error-a-256-character-title-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › An excessively long title is rejected with a client error: &lt;case&gt; › An excessively long title is rejected with a client error: a 10,000-character title" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.986">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-002: expected to fail until fixed. See docs/API_DEFECTS.md#api-002">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-57124-or-a-10-000-character-title-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › An excessively long title is rejected with a client error: &lt;case&gt; › An excessively long title is rejected with a client error: a 100,000-character title" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.97">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-002: expected to fail until fixed. See docs/API_DEFECTS.md#api-002">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-dbeb2-r-a-100-000-character-title-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › An excessively long title is rejected with a client error: &lt;case&gt; › An excessively long title is rejected with a client error: a 1,000,000-character title" classname=".features-gen/api/api/create-post.feature.spec.js" time="1.813">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-002: expected to fail until fixed. See docs/API_DEFECTS.md#api-002">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-8e03d-a-1-000-000-character-title-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › Unsupported special characters do not cause a server error: &lt;case&gt; › Unsupported special characters do not cause a server error: a title containing a null byte" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.982">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › Unsupported special characters do not cause a server error: &lt;case&gt; › Unsupported special characters do not cause a server error: a title containing control characters" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.979">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › Unsupported special characters do not cause a server error: &lt;case&gt; › Unsupported special characters do not cause a server error: a title containing an invalid lone surrogate" classname=".features-gen/api/api/create-post.feature.spec.js" time="1.032">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › Unsupported special characters do not cause a server error: &lt;case&gt; › Unsupported special characters do not cause a server error: a title containing a right-to-left override" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.8">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › Unsupported special characters do not cause a server error: &lt;case&gt; › Unsupported special characters do not cause a server error: a title containing a script tag" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.526">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › Unsupported special characters are rejected with a client error: &lt;case&gt; › Unsupported special characters are rejected with a client error: a title containing a null byte" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.99">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-003: expected to fail until fixed. See docs/API_DEFECTS.md#api-003">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-6620d-itle-containing-a-null-byte-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › Unsupported special characters are rejected with a client error: &lt;case&gt; › Unsupported special characters are rejected with a client error: a title containing control characters" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.96">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-003: expected to fail until fixed. See docs/API_DEFECTS.md#api-003">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-541bb-ntaining-control-characters-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › Unsupported special characters are rejected with a client error: &lt;case&gt; › Unsupported special characters are rejected with a client error: a title containing an invalid lone surrogate" classname=".features-gen/api/api/create-post.feature.spec.js" time="1.029">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-003: expected to fail until fixed. See docs/API_DEFECTS.md#api-003">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-34a8c-g-an-invalid-lone-surrogate-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › Unsupported special characters are rejected with a client error: &lt;case&gt; › Unsupported special characters are rejected with a client error: a title containing a right-to-left override" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.529">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-003: expected to fail until fixed. See docs/API_DEFECTS.md#api-003">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-696eb-ng-a-right-to-left-override-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › Unsupported special characters are rejected with a client error: &lt;case&gt; › Unsupported special characters are rejected with a client error: a title containing a script tag" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.508">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-003: expected to fail until fixed. See docs/API_DEFECTS.md#api-003">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-b7e99-tle-containing-a-script-tag-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › Legitimate special characters are accepted and stored unchanged: &lt;case&gt; › Legitimate special characters are accepted and stored unchanged: a title with emoji and non-Latin scripts" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.522">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › Legitimate special characters are accepted and stored unchanged: &lt;case&gt; › Legitimate special characters are accepted and stored unchanged: a title with quotes, ampersands and backslashes" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.968">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › Legitimate special characters are accepted and stored unchanged: &lt;case&gt; › Legitimate special characters are accepted and stored unchanged: a title that looks like SQL injection" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.558">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A missing required field does not cause a server error: &lt;case&gt; › A missing required field does not cause a server error: no userId" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.526">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A missing required field does not cause a server error: &lt;case&gt; › A missing required field does not cause a server error: no title" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.513">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A missing required field does not cause a server error: &lt;case&gt; › A missing required field does not cause a server error: no body" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.518">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A missing required field does not cause a server error: &lt;case&gt; › A missing required field does not cause a server error: an empty object" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.523">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A missing required field is rejected with a client error: &lt;case&gt; › A missing required field is rejected with a client error: no userId" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.99">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-001: expected to fail until fixed. See docs/API_DEFECTS.md#api-001">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-96255-th-a-client-error-no-userId-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A missing required field is rejected with a client error: &lt;case&gt; › A missing required field is rejected with a client error: no title" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.563">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-001: expected to fail until fixed. See docs/API_DEFECTS.md#api-001">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-1b3bd-ith-a-client-error-no-title-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A missing required field is rejected with a client error: &lt;case&gt; › A missing required field is rejected with a client error: no body" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.554">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-001: expected to fail until fixed. See docs/API_DEFECTS.md#api-001">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-38267-with-a-client-error-no-body-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A missing required field is rejected with a client error: &lt;case&gt; › A missing required field is rejected with a client error: an empty object" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.56">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-001: expected to fail until fixed. See docs/API_DEFECTS.md#api-001">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-61197-lient-error-an-empty-object-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A field with the wrong data type does not cause a server error: &lt;case&gt; › A field with the wrong data type does not cause a server error: a userId that is text" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.512">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A field with the wrong data type does not cause a server error: &lt;case&gt; › A field with the wrong data type does not cause a server error: a negative userId" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.518">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A field with the wrong data type does not cause a server error: &lt;case&gt; › A field with the wrong data type does not cause a server error: a title that is a number" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.563">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A field with the wrong data type does not cause a server error: &lt;case&gt; › A field with the wrong data type does not cause a server error: a title that is null" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.527">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A field with the wrong data type is rejected with a client error: &lt;case&gt; › A field with the wrong data type is rejected with a client error: a userId that is text" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.525">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-004: expected to fail until fixed. See docs/API_DEFECTS.md#api-004">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-f6eb8-error-a-userId-that-is-text-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A field with the wrong data type is rejected with a client error: &lt;case&gt; › A field with the wrong data type is rejected with a client error: a negative userId" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.552">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-004: expected to fail until fixed. See docs/API_DEFECTS.md#api-004">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-0ae3a-ent-error-a-negative-userId-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A field with the wrong data type is rejected with a client error: &lt;case&gt; › A field with the wrong data type is rejected with a client error: a title that is a number" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.519">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-004: expected to fail until fixed. See docs/API_DEFECTS.md#api-004">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-3941e-or-a-title-that-is-a-number-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A field with the wrong data type is rejected with a client error: &lt;case&gt; › A field with the wrong data type is rejected with a client error: a title that is null" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.521">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-004: expected to fail until fixed. See docs/API_DEFECTS.md#api-004">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-443a3--error-a-title-that-is-null-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A JSON array body does not cause a server error" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.534">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A malformed JSON body is rejected with 400, not a server error: &lt;case&gt; › A malformed JSON body is rejected with 400, not a server error: a truncated JSON body" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.525">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-005: expected to fail until fixed. See docs/API_DEFECTS.md#api-005">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-37395-error-a-truncated-JSON-body-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › A malformed JSON body is rejected with 400, not a server error: &lt;case&gt; › A malformed JSON body is rejected with 400, not a server error: a JSON null body" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.513">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-005: expected to fail until fixed. See docs/API_DEFECTS.md#api-005">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-b59d1-rver-error-a-JSON-null-body-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › An error response does not reveal internal details: &lt;case&gt; › An error response does not reveal internal details: a truncated JSON body" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.595">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-006: expected to fail until fixed. See docs/API_DEFECTS.md#api-006">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-baba9-tails-a-truncated-JSON-body-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Creating posts with boundary and invalid data › An error response does not reveal internal details: &lt;case&gt; › An error response does not reveal internal details: a JSON null body" classname=".features-gen/api/api/create-post.feature.spec.js" time="0.566">
+<properties>
+<property name="fail" value="">
+</property>
+<property name="environment" value="local">
+</property>
+<property name="known defect" value="API-006: expected to fail until fixed. See docs/API_DEFECTS.md#api-006">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/api-create-post.feature-Cr-4d477-al-details-a-JSON-null-body-api/error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name=".features-gen/api/api/health.feature.spec.js" timestamp="2026-10-05T18:25:17.849Z" hostname="api" tests="1" failures="0" skipped="0" time="0.284" errors="0">
+<testcase name="JSONPlaceholder availability › An existing post can be fetched" classname=".features-gen/api/api/health.feature.spec.js" time="0.284">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+</testsuite>
+<testsuite name=".features-gen/sql/sql/ipl-batting-streaks.feature.spec.js" timestamp="2026-10-05T18:25:17.849Z" hostname="sql" tests="11" failures="0" skipped="0" time="1.238" errors="0">
+<testcase name="SQL scenario 2: IPL player performance streaks › The tables are created as designed" classname=".features-gen/sql/sql/ipl-batting-streaks.feature.spec.js" time="0.35">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/sql-ipl-batting-streaks.fe-5fb0c-les-are-created-as-designed-sql/attachments/ipl-batting-streaks-schema-png-92d5ec0d252b1a3d2884ec5d4c643b654e501acf.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="SQL scenario 2: IPL player performance streaks › A team must have a code" classname=".features-gen/sql/sql/ipl-batting-streaks.feature.spec.js" time="0.011">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 2: IPL player performance streaks › Players with 30+ runs in at least 3 consecutive matches, and when each streak started" classname=".features-gen/sql/sql/ipl-batting-streaks.feature.spec.js" time="0.444">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/sql-ipl-batting-streaks.fe-49e46-nd-when-each-streak-started-sql/attachments/ipl-batting-streaks-png-967c902d25a244cd6a3f1ec74988a270a14cefcc.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="SQL scenario 2: IPL player performance streaks › Rule check: &lt;rule&gt; › Rule check: exactly 30 runs counts; a later run of 2 matches does not" classname=".features-gen/sql/sql/ipl-batting-streaks.feature.spec.js" time="0.01">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 2: IPL player performance streaks › Rule check: &lt;rule&gt; › Rule check: six 30+ scores in a row are one streak, not four overlapping" classname=".features-gen/sql/sql/ipl-batting-streaks.feature.spec.js" time="0.01">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 2: IPL player performance streaks › Rule check: &lt;rule&gt; › Rule check: a score of 29 breaks the streak" classname=".features-gen/sql/sql/ipl-batting-streaks.feature.spec.js" time="0.013">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 2: IPL player performance streaks › Rule check: &lt;rule&gt; › Rule check: exactly 30, 30, 30 is a streak" classname=".features-gen/sql/sql/ipl-batting-streaks.feature.spec.js" time="0.003">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 2: IPL player performance streaks › Rule check: &lt;rule&gt; › Rule check: two separate streaks are both reported" classname=".features-gen/sql/sql/ipl-batting-streaks.feature.spec.js" time="0.001">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 2: IPL player performance streaks › Rule check: &lt;rule&gt; › Rule check: 2023 matches are ignored" classname=".features-gen/sql/sql/ipl-batting-streaks.feature.spec.js" time="0.001">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 2: IPL player performance streaks › Rule check: &lt;rule&gt; › Rule check: a match the player did not bat in is skipped" classname=".features-gen/sql/sql/ipl-batting-streaks.feature.spec.js" time="0.001">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 2: IPL player performance streaks › Stricter variant: a team match the player missed breaks the streak" classname=".features-gen/sql/sql/ipl-batting-streaks.feature.spec.js" time="0.394">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/sql-ipl-batting-streaks.fe-f427a-er-missed-breaks-the-streak-sql/attachments/ipl-batting-streaks-team-schedule-png-2d37299db62dffd6dc8a784e681a8faae105a00d.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" timestamp="2026-10-05T18:25:17.849Z" hostname="sql" tests="20" failures="0" skipped="0" time="0.652" errors="0">
+<testcase name="SQL scenario 1: round-trip transfers › The tables are created as designed" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.281">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/sql-round-trip-transfers.f-fc970-les-are-created-as-designed-sql/attachments/round-trip-transfers-schema-png-c4995f08a8f60cb10a33bf203b450aa1283f6b75.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › The query reports exactly the expected round trips" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.339">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/sql-round-trip-transfers.f-db9b1-ly-the-expected-round-trips-sql/attachments/round-trip-transfers-png-b71dcba1c8534440f0f80305bf706725ce5f39ad.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › Rule check: &lt;rule&gt; (transactions &lt;original&gt; then &lt;return&gt;) › Rule check: an exact reversal (transactions 1 then 2)" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.003">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › Rule check: &lt;rule&gt; (transactions &lt;original&gt; then &lt;return&gt;) › Rule check: a return exactly 10% lower (transactions 3 then 4)" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.002">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › Rule check: &lt;rule&gt; (transactions &lt;original&gt; then &lt;return&gt;) › Rule check: a return 10.5% lower (transactions 5 then 6)" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.002">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › Rule check: &lt;rule&gt; (transactions &lt;original&gt; then &lt;return&gt;) › Rule check: a return exactly 24 hours later (transactions 7 then 8)" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.001">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › Rule check: &lt;rule&gt; (transactions &lt;original&gt; then &lt;return&gt;) › Rule check: a return 24 hours and 1 minute later (transactions 9 then 10)" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.002">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › Rule check: &lt;rule&gt; (transactions &lt;original&gt; then &lt;return&gt;) › Rule check: the same direction twice (transactions 11 then 12)" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.002">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › Rule check: &lt;rule&gt; (transactions &lt;original&gt; then &lt;return&gt;) › Rule check: money moved on to a third account (transactions 13 then 14)" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.002">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › Rule check: &lt;rule&gt; (transactions &lt;original&gt; then &lt;return&gt;) › Rule check: the first of two qualifying returns (transactions 15 then 16)" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.003">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › Rule check: &lt;rule&gt; (transactions &lt;original&gt; then &lt;return&gt;) › Rule check: the second of two qualifying returns (transactions 15 then 17)" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.001">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › Rule check: &lt;rule&gt; (transactions &lt;original&gt; then &lt;return&gt;) › Rule check: a return exactly 10% higher (transactions 18 then 19)" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.001">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › Rule check: &lt;rule&gt; (transactions &lt;original&gt; then &lt;return&gt;) › Rule check: a return 10.01% higher (transactions 20 then 21)" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.002">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › Rule check: &lt;rule&gt; (transactions &lt;original&gt; then &lt;return&gt;) › Rule check: whoever sends first is account A (transactions 22 then 23)" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.001">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › Rule check: &lt;rule&gt; (transactions &lt;original&gt; then &lt;return&gt;) › Rule check: the return is never the original (transactions 23 then 22)" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.001">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › The table design rejects invalid data: &lt;problem&gt; › The table design rejects invalid data: a zero amount" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.002">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › The table design rejects invalid data: &lt;problem&gt; › The table design rejects invalid data: sending to the same account" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.002">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › The table design rejects invalid data: &lt;problem&gt; › The table design rejects invalid data: an unknown account" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.001">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › The table design rejects invalid data: &lt;problem&gt; › The table design rejects invalid data: an account with no id" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.002">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+<testcase name="SQL scenario 1: round-trip transfers › The table design rejects invalid data: &lt;problem&gt; › The table design rejects invalid data: a badly formatted time" classname=".features-gen/sql/sql/round-trip-transfers.feature.spec.js" time="0.002">
+<properties>
+<property name="environment" value="local">
+</property>
+</properties>
+</testcase>
+</testsuite>
+</testsuites>

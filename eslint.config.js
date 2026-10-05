@@ -6,7 +6,17 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  { ignores: ['**/dist', 'node_modules', 'reports', 'test-results', 'playwright-report', '.features-gen'] },
+  {
+    ignores: [
+      '**/dist',
+      'node_modules',
+      'reports',
+      'test-results',
+      'playwright-report',
+      '.features-gen',
+      'results',
+    ],
+  },
   {
     files: ['**/*.{ts,tsx}'],
     extends: [js.configs.recommended, ...tseslint.configs.recommended],

@@ -1,0 +1,831 @@
+{
+  "startedAt": "2026-10-05T18:25:37.660Z",
+  "finishedAt": "2026-10-05T18:26:05.310Z",
+  "provider": "heuristic (no AI)",
+  "providerNote": "auto: fell back to the non-AI matcher because `claude` is not logged in (run: claude auth login)",
+  "registryFile": "tests/self-heal/legacyLocators.ts",
+  "detection": "5 failed",
+  "outcomes": [
+    {
+      "incident": {
+        "key": "interestRateInput",
+        "intent": "The Interest Rate number box in the loan details form",
+        "spec": {
+          "role": "textbox",
+          "name": "Interest Rate"
+        },
+        "specText": "getByRole('textbox', { name: 'Interest Rate' })",
+        "problem": "not-found",
+        "matchCount": 0,
+        "url": "http://localhost:5173/?type=home&amount=5000000&rate=9&tenure=15&start=2026-10",
+        "pageTitle": "EMI Calculator · Loan Planner",
+        "scenarioTitle": "Type the interest rate with the legacy page object",
+        "featureFile": ".features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js",
+        "ariaSnapshot": "- link \"Skip to content\":\n  - /url: \"#main\"\n- banner:\n  - text: Loan Planner\n  - navigation \"Main\":\n    - list:\n      - listitem:\n        - link \"EMI Calculator\":\n          - /url: /?type=home&amount=5000000&rate=9&tenure=15&start=2026-10\n      - listitem:\n        - link \"Payment Schedule\":\n          - /url: /schedule?type=home&amount=5000000&rate=9&tenure=15&start=2026-10\n- main:\n  - heading \"EMI Calculator\" [level=1]\n  - paragraph: Work out your monthly instalment, total interest and total payment for a home, personal or car loan.\n  - region \"EMI calculator\":\n    - tablist \"Loan type\":\n      - tab \"Home Loan\" [selected]\n      - tab \"Personal Loan\"\n      - tab \"Car Loan\"\n    - tabpanel \"Home Loan\":\n      - form \"Loan details\":\n        - text: Home Loan Amount ₹\n        - spinbutton \"Home Loan Amount\": \"5000000\"\n        - slider \"Home Loan Amount slider\": \"5000000\"\n        - paragraph: ₹50,00,000 (50 Lakh)\n        - text: Interest Rate\n        - spinbutton \"Interest Rate\": \"9\"\n        - text: \"%\"\n        - slider \"Interest Rate slider\": \"9\"\n        - paragraph: 9%\n        - text: Loan Tenure\n        - spinbutton \"Loan Tenure\": \"15\"\n        - text: Yr\n        - slider \"Loan Tenure slider\": \"15\"\n        - paragraph: 15 Years\n      - term: Monthly EMI\n      - definition: ₹50,713\n      - definition: Equated monthly instalment\n      - term: Total Interest Payable\n      - definition: ₹41,28,399\n      - definition: Over the full tenure\n      - term: Total Payment\n      - definition: ₹91,28,399\n      - definition: Principal + Interest\n      - figure \"Break-up of Total Payment\":\n        - text: Break-up of Total Payment\n        - 'img \"Pie chart: Principal Loan Amount ₹50,00,000 (54.8%), Total Interest ₹41,28,399 (45.2%)\"':\n          - application: 54.8% 45.2%\n        - list:\n          - listitem:\n            - text: Principal Loan Amount\n            - strong: ₹50,00,000\n            - text: 54.8%\n          - listitem:\n            - text: Total Interest\n            - strong: ₹41,28,399\n            - text: 45.2%\n  - region \"Loan at a Glance\":\n    - heading \"Loan at a Glance\" [level=2]\n    - term: Loan Type\n    - definition: Home Loan\n    - term: Number of EMIs\n    - definition: \"180\"\n    - term: Interest as % of Principal\n    - definition: 82.6%\n    - term: First EMI\n    - definition: Oct 2026\n    - term: Last EMI\n    - definition: Sep 2041\n    - link \"View payment schedule\":\n      - /url: /schedule?type=home&amount=5000000&rate=9&tenure=15&start=2026-10\n- contentinfo: Figures are estimates for planning only. Built for the Streamhub QA automation assessment.",
+        "testIdElements": [
+          {
+            "testId": "summary-emi",
+            "tag": "div",
+            "text": "Monthly EMI₹50,713Equated monthly instalment"
+          },
+          {
+            "testId": "emi-value",
+            "tag": "dd",
+            "text": "₹50,713"
+          },
+          {
+            "testId": "summary-total-interest",
+            "tag": "div",
+            "text": "Total Interest Payable₹41,28,399Over the full tenure"
+          },
+          {
+            "testId": "total-interest-value",
+            "tag": "dd",
+            "text": "₹41,28,399"
+          },
+          {
+            "testId": "summary-total-payment",
+            "tag": "div",
+            "text": "Total Payment₹91,28,399Principal + Interest"
+          },
+          {
+            "testId": "total-payment-value",
+            "tag": "dd",
+            "text": "₹91,28,399"
+          },
+          {
+            "testId": "breakup-pie-chart",
+            "tag": "figure",
+            "text": "Break-up of Total Payment54.8%45.2%Principal Loan Amount₹50,00,00054.8%Total Int"
+          },
+          {
+            "testId": "pie-slice-principal",
+            "tag": "path",
+            "text": ""
+          },
+          {
+            "testId": "pie-slice-interest",
+            "tag": "path",
+            "text": ""
+          },
+          {
+            "testId": "pie-legend-principal",
+            "tag": "li",
+            "text": "Principal Loan Amount₹50,00,00054.8%"
+          },
+          {
+            "testId": "pie-value-principal",
+            "tag": "strong",
+            "text": "₹50,00,000"
+          },
+          {
+            "testId": "pie-share-principal",
+            "tag": "span",
+            "text": "54.8%"
+          },
+          {
+            "testId": "pie-legend-interest",
+            "tag": "li",
+            "text": "Total Interest₹41,28,39945.2%"
+          },
+          {
+            "testId": "pie-value-interest",
+            "tag": "strong",
+            "text": "₹41,28,399"
+          },
+          {
+            "testId": "pie-share-interest",
+            "tag": "span",
+            "text": "45.2%"
+          },
+          {
+            "testId": "glance-loan-type",
+            "tag": "dd",
+            "text": "Home Loan"
+          },
+          {
+            "testId": "glance-emi-count",
+            "tag": "dd",
+            "text": "180"
+          },
+          {
+            "testId": "glance-interest-ratio",
+            "tag": "dd",
+            "text": "82.6%"
+          },
+          {
+            "testId": "glance-first-emi",
+            "tag": "dd",
+            "text": "Oct 2026"
+          },
+          {
+            "testId": "glance-last-emi",
+            "tag": "dd",
+            "text": "Sep 2041"
+          }
+        ],
+        "screenshotFile": "reports/self-heal/screenshots/interestrateinput.png",
+        "recordedAt": "2026-10-05T18:25:45.046Z"
+      },
+      "promptFile": "reports/self-heal/prompts/interestRateInput.md",
+      "candidates": [
+        {
+          "spec": {
+            "role": "spinbutton",
+            "name": "Interest Rate"
+          },
+          "confidence": 1,
+          "reason": "same name \"Interest Rate\" but role \"spinbutton\" (the old role \"textbox\" was wrong)",
+          "validation": {
+            "passed": true,
+            "summary": "1 passed",
+            "match": {
+              "key": "interestRateInput",
+              "spec": {
+                "role": "spinbutton",
+                "name": "Interest Rate"
+              },
+              "specText": "getByRole('spinbutton', { name: 'Interest Rate' })",
+              "overridden": true,
+              "element": {
+                "tag": "input",
+                "text": "",
+                "ariaSnapshot": "- spinbutton \"Interest Rate\": \"9\""
+              }
+            }
+          }
+        }
+      ],
+      "chosen": {
+        "role": "spinbutton",
+        "name": "Interest Rate"
+      }
+    },
+    {
+      "incident": {
+        "key": "loanTenureInput",
+        "intent": "The Loan Tenure number box (in years) in the loan details form",
+        "spec": {
+          "xpath": "/html/body/div/div/main/section[2]/div[2]/form/div[3]/div[1]/div/input"
+        },
+        "specText": "locator('xpath=/html/body/div/div/main/section[2]/div[2]/form/div[3]/div[1]/div/input')",
+        "problem": "not-found",
+        "matchCount": 0,
+        "url": "http://localhost:5173/?type=home&amount=2500000&rate=10&tenure=5&start=2026-10",
+        "pageTitle": "EMI Calculator · Loan Planner",
+        "scenarioTitle": "Type the loan tenure with the legacy page object",
+        "featureFile": ".features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js",
+        "ariaSnapshot": "- link \"Skip to content\":\n  - /url: \"#main\"\n- banner:\n  - text: Loan Planner\n  - navigation \"Main\":\n    - list:\n      - listitem:\n        - link \"EMI Calculator\":\n          - /url: /?type=home&amount=2500000&rate=10&tenure=5&start=2026-10\n      - listitem:\n        - link \"Payment Schedule\":\n          - /url: /schedule?type=home&amount=2500000&rate=10&tenure=5&start=2026-10\n- main:\n  - heading \"EMI Calculator\" [level=1]\n  - paragraph: Work out your monthly instalment, total interest and total payment for a home, personal or car loan.\n  - region \"EMI calculator\":\n    - tablist \"Loan type\":\n      - tab \"Home Loan\" [selected]\n      - tab \"Personal Loan\"\n      - tab \"Car Loan\"\n    - tabpanel \"Home Loan\":\n      - form \"Loan details\":\n        - text: Home Loan Amount ₹\n        - spinbutton \"Home Loan Amount\": \"2500000\"\n        - slider \"Home Loan Amount slider\": \"2500000\"\n        - paragraph: ₹25,00,000 (25 Lakh)\n        - text: Interest Rate\n        - spinbutton \"Interest Rate\": \"10\"\n        - text: \"%\"\n        - slider \"Interest Rate slider\": \"10\"\n        - paragraph: 10%\n        - text: Loan Tenure\n        - spinbutton \"Loan Tenure\": \"5\"\n        - text: Yr\n        - slider \"Loan Tenure slider\": \"5\"\n        - paragraph: 5 Years\n      - term: Monthly EMI\n      - definition: ₹53,118\n      - definition: Equated monthly instalment\n      - term: Total Interest Payable\n      - definition: ₹6,87,057\n      - definition: Over the full tenure\n      - term: Total Payment\n      - definition: ₹31,87,057\n      - definition: Principal + Interest\n      - figure \"Break-up of Total Payment\":\n        - text: Break-up of Total Payment\n        - 'img \"Pie chart: Principal Loan Amount ₹25,00,000 (78.4%), Total Interest ₹6,87,057 (21.6%)\"':\n          - application: 78.4% 21.6%\n        - list:\n          - listitem:\n            - text: Principal Loan Amount\n            - strong: ₹25,00,000\n            - text: 78.4%\n          - listitem:\n            - text: Total Interest\n            - strong: ₹6,87,057\n            - text: 21.6%\n  - region \"Loan at a Glance\":\n    - heading \"Loan at a Glance\" [level=2]\n    - term: Loan Type\n    - definition: Home Loan\n    - term: Number of EMIs\n    - definition: \"60\"\n    - term: Interest as % of Principal\n    - definition: 27.5%\n    - term: First EMI\n    - definition: Oct 2026\n    - term: Last EMI\n    - definition: Sep 2031\n    - link \"View payment schedule\":\n      - /url: /schedule?type=home&amount=2500000&rate=10&tenure=5&start=2026-10\n- contentinfo: Figures are estimates for planning only. Built for the Streamhub QA automation assessment.",
+        "testIdElements": [
+          {
+            "testId": "summary-emi",
+            "tag": "div",
+            "text": "Monthly EMI₹53,118Equated monthly instalment"
+          },
+          {
+            "testId": "emi-value",
+            "tag": "dd",
+            "text": "₹53,118"
+          },
+          {
+            "testId": "summary-total-interest",
+            "tag": "div",
+            "text": "Total Interest Payable₹6,87,057Over the full tenure"
+          },
+          {
+            "testId": "total-interest-value",
+            "tag": "dd",
+            "text": "₹6,87,057"
+          },
+          {
+            "testId": "summary-total-payment",
+            "tag": "div",
+            "text": "Total Payment₹31,87,057Principal + Interest"
+          },
+          {
+            "testId": "total-payment-value",
+            "tag": "dd",
+            "text": "₹31,87,057"
+          },
+          {
+            "testId": "breakup-pie-chart",
+            "tag": "figure",
+            "text": "Break-up of Total Payment78.4%21.6%Principal Loan Amount₹25,00,00078.4%Total Int"
+          },
+          {
+            "testId": "pie-slice-principal",
+            "tag": "path",
+            "text": ""
+          },
+          {
+            "testId": "pie-slice-interest",
+            "tag": "path",
+            "text": ""
+          },
+          {
+            "testId": "pie-legend-principal",
+            "tag": "li",
+            "text": "Principal Loan Amount₹25,00,00078.4%"
+          },
+          {
+            "testId": "pie-value-principal",
+            "tag": "strong",
+            "text": "₹25,00,000"
+          },
+          {
+            "testId": "pie-share-principal",
+            "tag": "span",
+            "text": "78.4%"
+          },
+          {
+            "testId": "pie-legend-interest",
+            "tag": "li",
+            "text": "Total Interest₹6,87,05721.6%"
+          },
+          {
+            "testId": "pie-value-interest",
+            "tag": "strong",
+            "text": "₹6,87,057"
+          },
+          {
+            "testId": "pie-share-interest",
+            "tag": "span",
+            "text": "21.6%"
+          },
+          {
+            "testId": "glance-loan-type",
+            "tag": "dd",
+            "text": "Home Loan"
+          },
+          {
+            "testId": "glance-emi-count",
+            "tag": "dd",
+            "text": "60"
+          },
+          {
+            "testId": "glance-interest-ratio",
+            "tag": "dd",
+            "text": "27.5%"
+          },
+          {
+            "testId": "glance-first-emi",
+            "tag": "dd",
+            "text": "Oct 2026"
+          },
+          {
+            "testId": "glance-last-emi",
+            "tag": "dd",
+            "text": "Sep 2031"
+          }
+        ],
+        "screenshotFile": "reports/self-heal/screenshots/loantenureinput.png",
+        "recordedAt": "2026-10-05T18:25:45.059Z"
+      },
+      "promptFile": "reports/self-heal/prompts/loanTenureInput.md",
+      "candidates": [
+        {
+          "spec": {
+            "role": "spinbutton",
+            "name": "Loan Tenure"
+          },
+          "confidence": 1,
+          "reason": "\"Loan Tenure\" shares words with the intent",
+          "validation": {
+            "passed": true,
+            "summary": "1 passed",
+            "match": {
+              "key": "loanTenureInput",
+              "spec": {
+                "role": "spinbutton",
+                "name": "Loan Tenure"
+              },
+              "specText": "getByRole('spinbutton', { name: 'Loan Tenure' })",
+              "overridden": true,
+              "element": {
+                "tag": "input",
+                "text": "",
+                "ariaSnapshot": "- spinbutton \"Loan Tenure\": \"5\""
+              }
+            }
+          }
+        }
+      ],
+      "chosen": {
+        "role": "spinbutton",
+        "name": "Loan Tenure"
+      }
+    },
+    {
+      "incident": {
+        "key": "monthlyEmi",
+        "intent": "The Monthly EMI amount shown in the loan summary cards",
+        "spec": {
+          "testId": "monthly-emi"
+        },
+        "specText": "getByTestId('monthly-emi')",
+        "problem": "not-found",
+        "matchCount": 0,
+        "url": "http://localhost:5173/?type=home&amount=2500000&rate=10&tenure=10&start=2026-10",
+        "pageTitle": "EMI Calculator · Loan Planner",
+        "scenarioTitle": "Read the monthly EMI with the legacy page object",
+        "featureFile": ".features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js",
+        "ariaSnapshot": "- link \"Skip to content\":\n  - /url: \"#main\"\n- banner:\n  - text: Loan Planner\n  - navigation \"Main\":\n    - list:\n      - listitem:\n        - link \"EMI Calculator\":\n          - /url: /?type=home&amount=2500000&rate=10&tenure=10&start=2026-10\n      - listitem:\n        - link \"Payment Schedule\":\n          - /url: /schedule?type=home&amount=2500000&rate=10&tenure=10&start=2026-10\n- main:\n  - heading \"EMI Calculator\" [level=1]\n  - paragraph: Work out your monthly instalment, total interest and total payment for a home, personal or car loan.\n  - region \"EMI calculator\":\n    - tablist \"Loan type\":\n      - tab \"Home Loan\" [selected]\n      - tab \"Personal Loan\"\n      - tab \"Car Loan\"\n    - tabpanel \"Home Loan\":\n      - form \"Loan details\":\n        - text: Home Loan Amount ₹\n        - spinbutton \"Home Loan Amount\": \"2500000\"\n        - slider \"Home Loan Amount slider\": \"2500000\"\n        - paragraph: ₹25,00,000 (25 Lakh)\n        - text: Interest Rate\n        - spinbutton \"Interest Rate\": \"10\"\n        - text: \"%\"\n        - slider \"Interest Rate slider\": \"10\"\n        - paragraph: 10%\n        - text: Loan Tenure\n        - spinbutton \"Loan Tenure\": \"10\"\n        - text: Yr\n        - slider \"Loan Tenure slider\": \"10\"\n        - paragraph: 10 Years\n      - term: Monthly EMI\n      - definition: ₹33,038\n      - definition: Equated monthly instalment\n      - term: Total Interest Payable\n      - definition: ₹14,64,522\n      - definition: Over the full tenure\n      - term: Total Payment\n      - definition: ₹39,64,522\n      - definition: Principal + Interest\n      - figure \"Break-up of Total Payment\":\n        - text: Break-up of Total Payment\n        - 'img \"Pie chart: Principal Loan Amount ₹25,00,000 (63.1%), Total Interest ₹14,64,522 (36.9%)\"':\n          - application: 63.1% 36.9%\n        - list:\n          - listitem:\n            - text: Principal Loan Amount\n            - strong: ₹25,00,000\n            - text: 63.1%\n          - listitem:\n            - text: Total Interest\n            - strong: ₹14,64,522\n            - text: 36.9%\n  - region \"Loan at a Glance\":\n    - heading \"Loan at a Glance\" [level=2]\n    - term: Loan Type\n    - definition: Home Loan\n    - term: Number of EMIs\n    - definition: \"120\"\n    - term: Interest as % of Principal\n    - definition: 58.6%\n    - term: First EMI\n    - definition: Oct 2026\n    - term: Last EMI\n    - definition: Sep 2036\n    - link \"View payment schedule\":\n      - /url: /schedule?type=home&amount=2500000&rate=10&tenure=10&start=2026-10\n- contentinfo: Figures are estimates for planning only. Built for the Streamhub QA automation assessment.",
+        "testIdElements": [
+          {
+            "testId": "summary-emi",
+            "tag": "div",
+            "text": "Monthly EMI₹33,038Equated monthly instalment"
+          },
+          {
+            "testId": "emi-value",
+            "tag": "dd",
+            "text": "₹33,038"
+          },
+          {
+            "testId": "summary-total-interest",
+            "tag": "div",
+            "text": "Total Interest Payable₹14,64,522Over the full tenure"
+          },
+          {
+            "testId": "total-interest-value",
+            "tag": "dd",
+            "text": "₹14,64,522"
+          },
+          {
+            "testId": "summary-total-payment",
+            "tag": "div",
+            "text": "Total Payment₹39,64,522Principal + Interest"
+          },
+          {
+            "testId": "total-payment-value",
+            "tag": "dd",
+            "text": "₹39,64,522"
+          },
+          {
+            "testId": "breakup-pie-chart",
+            "tag": "figure",
+            "text": "Break-up of Total Payment63.1%36.9%Principal Loan Amount₹25,00,00063.1%Total Int"
+          },
+          {
+            "testId": "pie-slice-principal",
+            "tag": "path",
+            "text": ""
+          },
+          {
+            "testId": "pie-slice-interest",
+            "tag": "path",
+            "text": ""
+          },
+          {
+            "testId": "pie-legend-principal",
+            "tag": "li",
+            "text": "Principal Loan Amount₹25,00,00063.1%"
+          },
+          {
+            "testId": "pie-value-principal",
+            "tag": "strong",
+            "text": "₹25,00,000"
+          },
+          {
+            "testId": "pie-share-principal",
+            "tag": "span",
+            "text": "63.1%"
+          },
+          {
+            "testId": "pie-legend-interest",
+            "tag": "li",
+            "text": "Total Interest₹14,64,52236.9%"
+          },
+          {
+            "testId": "pie-value-interest",
+            "tag": "strong",
+            "text": "₹14,64,522"
+          },
+          {
+            "testId": "pie-share-interest",
+            "tag": "span",
+            "text": "36.9%"
+          },
+          {
+            "testId": "glance-loan-type",
+            "tag": "dd",
+            "text": "Home Loan"
+          },
+          {
+            "testId": "glance-emi-count",
+            "tag": "dd",
+            "text": "120"
+          },
+          {
+            "testId": "glance-interest-ratio",
+            "tag": "dd",
+            "text": "58.6%"
+          },
+          {
+            "testId": "glance-first-emi",
+            "tag": "dd",
+            "text": "Oct 2026"
+          },
+          {
+            "testId": "glance-last-emi",
+            "tag": "dd",
+            "text": "Sep 2036"
+          }
+        ],
+        "screenshotFile": "reports/self-heal/screenshots/monthlyemi.png",
+        "recordedAt": "2026-10-05T18:25:45.085Z"
+      },
+      "promptFile": "reports/self-heal/prompts/monthlyEmi.md",
+      "candidates": [
+        {
+          "spec": {
+            "testId": "summary-emi"
+          },
+          "confidence": 0.9,
+          "reason": "test id \"summary-emi\" shares words with the intent",
+          "validation": {
+            "passed": false,
+            "summary": "1 failed",
+            "failure": "Error: expect(locator).toHaveText(expected) failed",
+            "match": {
+              "key": "monthlyEmi",
+              "spec": {
+                "testId": "summary-emi"
+              },
+              "specText": "getByTestId('summary-emi')",
+              "overridden": true,
+              "element": {
+                "tag": "div",
+                "text": "Monthly EMI₹33,038Equated monthly instalment",
+                "ariaSnapshot": "- term: Monthly EMI\n- definition: ₹33,038\n- definition: Equated monthly instalment"
+              }
+            }
+          }
+        },
+        {
+          "spec": {
+            "testId": "emi-value"
+          },
+          "confidence": 0.5,
+          "reason": "test id \"emi-value\" shares words with the intent",
+          "validation": {
+            "passed": true,
+            "summary": "1 passed",
+            "match": {
+              "key": "monthlyEmi",
+              "spec": {
+                "testId": "emi-value"
+              },
+              "specText": "getByTestId('emi-value')",
+              "overridden": true,
+              "element": {
+                "tag": "dd",
+                "text": "₹33,038",
+                "ariaSnapshot": "- definition: ₹33,038"
+              }
+            }
+          }
+        }
+      ],
+      "chosen": {
+        "testId": "emi-value"
+      }
+    },
+    {
+      "incident": {
+        "key": "personalLoanTab",
+        "intent": "The tab that switches the calculator to a personal loan",
+        "spec": {
+          "role": "tab",
+          "name": "Personal Loans"
+        },
+        "specText": "getByRole('tab', { name: 'Personal Loans' })",
+        "problem": "not-found",
+        "matchCount": 0,
+        "url": "http://localhost:5173/",
+        "pageTitle": "EMI Calculator · Loan Planner",
+        "scenarioTitle": "Switch to a personal loan with the legacy page object",
+        "featureFile": ".features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js",
+        "ariaSnapshot": "- link \"Skip to content\":\n  - /url: \"#main\"\n- banner:\n  - text: Loan Planner\n  - navigation \"Main\":\n    - list:\n      - listitem:\n        - link \"EMI Calculator\":\n          - /url: /?type=home&amount=5000000&rate=9&tenure=20&start=2026-10\n      - listitem:\n        - link \"Payment Schedule\":\n          - /url: /schedule?type=home&amount=5000000&rate=9&tenure=20&start=2026-10\n- main:\n  - heading \"EMI Calculator\" [level=1]\n  - paragraph: Work out your monthly instalment, total interest and total payment for a home, personal or car loan.\n  - region \"EMI calculator\":\n    - tablist \"Loan type\":\n      - tab \"Home Loan\" [selected]\n      - tab \"Personal Loan\"\n      - tab \"Car Loan\"\n    - tabpanel \"Home Loan\":\n      - form \"Loan details\":\n        - text: Home Loan Amount ₹\n        - spinbutton \"Home Loan Amount\": \"5000000\"\n        - slider \"Home Loan Amount slider\": \"5000000\"\n        - paragraph: ₹50,00,000 (50 Lakh)\n        - text: Interest Rate\n        - spinbutton \"Interest Rate\": \"9\"\n        - text: \"%\"\n        - slider \"Interest Rate slider\": \"9\"\n        - paragraph: 9%\n        - text: Loan Tenure\n        - spinbutton \"Loan Tenure\": \"20\"\n        - text: Yr\n        - slider \"Loan Tenure slider\": \"20\"\n        - paragraph: 20 Years\n      - term: Monthly EMI\n      - definition: ₹44,986\n      - definition: Equated monthly instalment\n      - term: Total Interest Payable\n      - definition: ₹57,96,711\n      - definition: Over the full tenure\n      - term: Total Payment\n      - definition: ₹1,07,96,711\n      - definition: Principal + Interest\n      - figure \"Break-up of Total Payment\":\n        - text: Break-up of Total Payment\n        - 'img \"Pie chart: Principal Loan Amount ₹50,00,000 (46.3%), Total Interest ₹57,96,711 (53.7%)\"':\n          - application: 46.3% 53.7%\n        - list:\n          - listitem:\n            - text: Principal Loan Amount\n            - strong: ₹50,00,000\n            - text: 46.3%\n          - listitem:\n            - text: Total Interest\n            - strong: ₹57,96,711\n            - text: 53.7%\n  - region \"Loan at a Glance\":\n    - heading \"Loan at a Glance\" [level=2]\n    - term: Loan Type\n    - definition: Home Loan\n    - term: Number of EMIs\n    - definition: \"240\"\n    - term: Interest as % of Principal\n    - definition: 115.9%\n    - term: First EMI\n    - definition: Oct 2026\n    - term: Last EMI\n    - definition: Sep 2046\n    - link \"View payment schedule\":\n      - /url: /schedule?type=home&amount=5000000&rate=9&tenure=20&start=2026-10\n- contentinfo: Figures are estimates for planning only. Built for the Streamhub QA automation assessment.",
+        "testIdElements": [
+          {
+            "testId": "summary-emi",
+            "tag": "div",
+            "text": "Monthly EMI₹44,986Equated monthly instalment"
+          },
+          {
+            "testId": "emi-value",
+            "tag": "dd",
+            "text": "₹44,986"
+          },
+          {
+            "testId": "summary-total-interest",
+            "tag": "div",
+            "text": "Total Interest Payable₹57,96,711Over the full tenure"
+          },
+          {
+            "testId": "total-interest-value",
+            "tag": "dd",
+            "text": "₹57,96,711"
+          },
+          {
+            "testId": "summary-total-payment",
+            "tag": "div",
+            "text": "Total Payment₹1,07,96,711Principal + Interest"
+          },
+          {
+            "testId": "total-payment-value",
+            "tag": "dd",
+            "text": "₹1,07,96,711"
+          },
+          {
+            "testId": "breakup-pie-chart",
+            "tag": "figure",
+            "text": "Break-up of Total Payment46.3%53.7%Principal Loan Amount₹50,00,00046.3%Total Int"
+          },
+          {
+            "testId": "pie-slice-principal",
+            "tag": "path",
+            "text": ""
+          },
+          {
+            "testId": "pie-slice-interest",
+            "tag": "path",
+            "text": ""
+          },
+          {
+            "testId": "pie-legend-principal",
+            "tag": "li",
+            "text": "Principal Loan Amount₹50,00,00046.3%"
+          },
+          {
+            "testId": "pie-value-principal",
+            "tag": "strong",
+            "text": "₹50,00,000"
+          },
+          {
+            "testId": "pie-share-principal",
+            "tag": "span",
+            "text": "46.3%"
+          },
+          {
+            "testId": "pie-legend-interest",
+            "tag": "li",
+            "text": "Total Interest₹57,96,71153.7%"
+          },
+          {
+            "testId": "pie-value-interest",
+            "tag": "strong",
+            "text": "₹57,96,711"
+          },
+          {
+            "testId": "pie-share-interest",
+            "tag": "span",
+            "text": "53.7%"
+          },
+          {
+            "testId": "glance-loan-type",
+            "tag": "dd",
+            "text": "Home Loan"
+          },
+          {
+            "testId": "glance-emi-count",
+            "tag": "dd",
+            "text": "240"
+          },
+          {
+            "testId": "glance-interest-ratio",
+            "tag": "dd",
+            "text": "115.9%"
+          },
+          {
+            "testId": "glance-first-emi",
+            "tag": "dd",
+            "text": "Oct 2026"
+          },
+          {
+            "testId": "glance-last-emi",
+            "tag": "dd",
+            "text": "Sep 2046"
+          }
+        ],
+        "screenshotFile": "reports/self-heal/screenshots/personalloantab.png",
+        "recordedAt": "2026-10-05T18:25:45.015Z"
+      },
+      "promptFile": "reports/self-heal/prompts/personalLoanTab.md",
+      "candidates": [
+        {
+          "spec": {
+            "role": "tab",
+            "name": "Personal Loan"
+          },
+          "confidence": 1,
+          "reason": "\"Personal Loan\" shares words with the intent",
+          "validation": {
+            "passed": true,
+            "summary": "1 passed",
+            "match": {
+              "key": "personalLoanTab",
+              "spec": {
+                "role": "tab",
+                "name": "Personal Loan"
+              },
+              "specText": "getByRole('tab', { name: 'Personal Loan' })",
+              "overridden": true,
+              "element": {
+                "tag": "button",
+                "text": "Personal Loan",
+                "ariaSnapshot": "- tab \"Personal Loan\""
+              }
+            }
+          }
+        }
+      ],
+      "chosen": {
+        "role": "tab",
+        "name": "Personal Loan"
+      }
+    },
+    {
+      "incident": {
+        "key": "totalInterestValue",
+        "intent": "The Total Interest Payable amount shown in the loan summary cards",
+        "spec": {
+          "css": "div.summary-card.interest > span.amount"
+        },
+        "specText": "locator('div.summary-card.interest > span.amount')",
+        "problem": "not-found",
+        "matchCount": 0,
+        "url": "http://localhost:5173/?type=home&amount=2500000&rate=10&tenure=10&start=2026-10",
+        "pageTitle": "EMI Calculator · Loan Planner",
+        "scenarioTitle": "Read the total interest with the legacy page object",
+        "featureFile": ".features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js",
+        "ariaSnapshot": "- link \"Skip to content\":\n  - /url: \"#main\"\n- banner:\n  - text: Loan Planner\n  - navigation \"Main\":\n    - list:\n      - listitem:\n        - link \"EMI Calculator\":\n          - /url: /?type=home&amount=2500000&rate=10&tenure=10&start=2026-10\n      - listitem:\n        - link \"Payment Schedule\":\n          - /url: /schedule?type=home&amount=2500000&rate=10&tenure=10&start=2026-10\n- main:\n  - heading \"EMI Calculator\" [level=1]\n  - paragraph: Work out your monthly instalment, total interest and total payment for a home, personal or car loan.\n  - region \"EMI calculator\":\n    - tablist \"Loan type\":\n      - tab \"Home Loan\" [selected]\n      - tab \"Personal Loan\"\n      - tab \"Car Loan\"\n    - tabpanel \"Home Loan\":\n      - form \"Loan details\":\n        - text: Home Loan Amount ₹\n        - spinbutton \"Home Loan Amount\": \"2500000\"\n        - slider \"Home Loan Amount slider\": \"2500000\"\n        - paragraph: ₹25,00,000 (25 Lakh)\n        - text: Interest Rate\n        - spinbutton \"Interest Rate\": \"10\"\n        - text: \"%\"\n        - slider \"Interest Rate slider\": \"10\"\n        - paragraph: 10%\n        - text: Loan Tenure\n        - spinbutton \"Loan Tenure\": \"10\"\n        - text: Yr\n        - slider \"Loan Tenure slider\": \"10\"\n        - paragraph: 10 Years\n      - term: Monthly EMI\n      - definition: ₹33,038\n      - definition: Equated monthly instalment\n      - term: Total Interest Payable\n      - definition: ₹14,64,522\n      - definition: Over the full tenure\n      - term: Total Payment\n      - definition: ₹39,64,522\n      - definition: Principal + Interest\n      - figure \"Break-up of Total Payment\":\n        - text: Break-up of Total Payment\n        - 'img \"Pie chart: Principal Loan Amount ₹25,00,000 (63.1%), Total Interest ₹14,64,522 (36.9%)\"':\n          - application: 63.1% 36.9%\n        - list:\n          - listitem:\n            - text: Principal Loan Amount\n            - strong: ₹25,00,000\n            - text: 63.1%\n          - listitem:\n            - text: Total Interest\n            - strong: ₹14,64,522\n            - text: 36.9%\n  - region \"Loan at a Glance\":\n    - heading \"Loan at a Glance\" [level=2]\n    - term: Loan Type\n    - definition: Home Loan\n    - term: Number of EMIs\n    - definition: \"120\"\n    - term: Interest as % of Principal\n    - definition: 58.6%\n    - term: First EMI\n    - definition: Oct 2026\n    - term: Last EMI\n    - definition: Sep 2036\n    - link \"View payment schedule\":\n      - /url: /schedule?type=home&amount=2500000&rate=10&tenure=10&start=2026-10\n- contentinfo: Figures are estimates for planning only. Built for the Streamhub QA automation assessment.",
+        "testIdElements": [
+          {
+            "testId": "summary-emi",
+            "tag": "div",
+            "text": "Monthly EMI₹33,038Equated monthly instalment"
+          },
+          {
+            "testId": "emi-value",
+            "tag": "dd",
+            "text": "₹33,038"
+          },
+          {
+            "testId": "summary-total-interest",
+            "tag": "div",
+            "text": "Total Interest Payable₹14,64,522Over the full tenure"
+          },
+          {
+            "testId": "total-interest-value",
+            "tag": "dd",
+            "text": "₹14,64,522"
+          },
+          {
+            "testId": "summary-total-payment",
+            "tag": "div",
+            "text": "Total Payment₹39,64,522Principal + Interest"
+          },
+          {
+            "testId": "total-payment-value",
+            "tag": "dd",
+            "text": "₹39,64,522"
+          },
+          {
+            "testId": "breakup-pie-chart",
+            "tag": "figure",
+            "text": "Break-up of Total Payment63.1%36.9%Principal Loan Amount₹25,00,00063.1%Total Int"
+          },
+          {
+            "testId": "pie-slice-principal",
+            "tag": "path",
+            "text": ""
+          },
+          {
+            "testId": "pie-slice-interest",
+            "tag": "path",
+            "text": ""
+          },
+          {
+            "testId": "pie-legend-principal",
+            "tag": "li",
+            "text": "Principal Loan Amount₹25,00,00063.1%"
+          },
+          {
+            "testId": "pie-value-principal",
+            "tag": "strong",
+            "text": "₹25,00,000"
+          },
+          {
+            "testId": "pie-share-principal",
+            "tag": "span",
+            "text": "63.1%"
+          },
+          {
+            "testId": "pie-legend-interest",
+            "tag": "li",
+            "text": "Total Interest₹14,64,52236.9%"
+          },
+          {
+            "testId": "pie-value-interest",
+            "tag": "strong",
+            "text": "₹14,64,522"
+          },
+          {
+            "testId": "pie-share-interest",
+            "tag": "span",
+            "text": "36.9%"
+          },
+          {
+            "testId": "glance-loan-type",
+            "tag": "dd",
+            "text": "Home Loan"
+          },
+          {
+            "testId": "glance-emi-count",
+            "tag": "dd",
+            "text": "120"
+          },
+          {
+            "testId": "glance-interest-ratio",
+            "tag": "dd",
+            "text": "58.6%"
+          },
+          {
+            "testId": "glance-first-emi",
+            "tag": "dd",
+            "text": "Oct 2026"
+          },
+          {
+            "testId": "glance-last-emi",
+            "tag": "dd",
+            "text": "Sep 2036"
+          }
+        ],
+        "screenshotFile": "reports/self-heal/screenshots/totalinterestvalue.png",
+        "recordedAt": "2026-10-05T18:25:45.058Z"
+      },
+      "promptFile": "reports/self-heal/prompts/totalInterestValue.md",
+      "candidates": [
+        {
+          "spec": {
+            "testId": "summary-total-interest"
+          },
+          "confidence": 0.9,
+          "reason": "test id \"summary-total-interest\" shares words with the intent",
+          "validation": {
+            "passed": false,
+            "summary": "1 failed",
+            "failure": "Error: expect(locator).toHaveText(expected) failed",
+            "match": {
+              "key": "totalInterestValue",
+              "spec": {
+                "testId": "summary-total-interest"
+              },
+              "specText": "getByTestId('summary-total-interest')",
+              "overridden": true,
+              "element": {
+                "tag": "div",
+                "text": "Total Interest Payable₹14,64,522Over the full tenure",
+                "ariaSnapshot": "- term: Total Interest Payable\n- definition: ₹14,64,522\n- definition: Over the full tenure"
+              }
+            }
+          }
+        },
+        {
+          "spec": {
+            "testId": "total-interest-value"
+          },
+          "confidence": 0.9,
+          "reason": "test id \"total-interest-value\" shares words with the intent",
+          "validation": {
+            "passed": true,
+            "summary": "1 passed",
+            "match": {
+              "key": "totalInterestValue",
+              "spec": {
+                "testId": "total-interest-value"
+              },
+              "specText": "getByTestId('total-interest-value')",
+              "overridden": true,
+              "element": {
+                "tag": "dd",
+                "text": "₹14,64,522",
+                "ariaSnapshot": "- definition: ₹14,64,522"
+              }
+            }
+          }
+        }
+      ],
+      "chosen": {
+        "testId": "total-interest-value"
+      }
+    }
+  ],
+  "regression": {
+    "passed": true,
+    "summary": "5 passed"
+  },
+  "diff": "diff --git a/tests/self-heal/legacyLocators.ts b/tests/self-heal/legacyLocators.ts\nindex 98fcee6..493ae64 100644\n--- a/tests/self-heal/legacyLocators.ts\n+++ b/tests/self-heal/legacyLocators.ts\n@@ -21,27 +21,27 @@ export const LEGACY_LOCATORS = {\n   // 1. Stale data-testid: the app renamed it to 'emi-value'.\n   monthlyEmi: {\n     intent: 'The Monthly EMI amount shown in the loan summary cards',\n-    spec: { testId: 'monthly-emi' },\n+    spec: { testId: 'emi-value' },\n   },\n   // 2. Wrong role: a number input has role \"spinbutton\", not \"textbox\".\n   interestRateInput: {\n     intent: 'The Interest Rate number box in the loan details form',\n-    spec: { role: 'textbox', name: 'Interest Rate' },\n+    spec: { role: 'spinbutton', name: 'Interest Rate' },\n   },\n   // 3. Renamed text: the tab is labelled \"Personal Loan\" (singular).\n   personalLoanTab: {\n     intent: 'The tab that switches the calculator to a personal loan',\n-    spec: { role: 'tab', name: 'Personal Loans' },\n+    spec: { role: 'tab', name: 'Personal Loan' },\n   },\n   // 4. Brittle absolute XPath: breaks as soon as the page layout changes.\n   loanTenureInput: {\n     intent: 'The Loan Tenure number box (in years) in the loan details form',\n-    spec: { xpath: '/html/body/div/div/main/section[2]/div[2]/form/div[3]/div[1]/div/input' },\n+    spec: { role: 'spinbutton', name: 'Loan Tenure' },\n   },\n   // 5. Brittle CSS tied to old styling class names that no longer exist.\n   totalInterestValue: {\n     intent: 'The Total Interest Payable amount shown in the loan summary cards',\n-    spec: { css: 'div.summary-card.interest > span.amount' },\n+    spec: { testId: 'total-interest-value' },\n   },\n } satisfies Record<string, LegacyLocator>;\n \n"
+}

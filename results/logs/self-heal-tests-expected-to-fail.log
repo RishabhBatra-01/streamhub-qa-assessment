@@ -1,0 +1,223 @@
+$ npx playwright test --project=self-heal --reporter=list
+
+
+Running 5 tests using 5 workers
+
+  ✘  1 [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:15:3 › Legacy page object with deliberately broken locators › Type the interest rate with the legacy page object @self-heal (5.8s)
+  ✘  2 [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:21:3 › Legacy page object with deliberately broken locators › Switch to a personal loan with the legacy page object @self-heal (5.8s)
+  ✘  3 [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:10:3 › Legacy page object with deliberately broken locators › Read the monthly EMI with the legacy page object @self-heal (5.8s)
+  ✘  5 [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:27:3 › Legacy page object with deliberately broken locators › Type the loan tenure with the legacy page object @self-heal (5.8s)
+  ✘  4 [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:33:3 › Legacy page object with deliberately broken locators › Read the total interest with the legacy page object @self-heal (5.8s)
+
+
+  1) [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:10:3 › Legacy page object with deliberately broken locators › Read the monthly EMI with the legacy page object @self-heal › Then the legacy "monthly EMI" shows "₹33,038" 
+
+    BrokenLocatorError: Locator "monthlyEmi" getByTestId('monthly-emi') matched 0 element(s), expected exactly 1.
+    Intent: The Monthly EMI amount shown in the loan summary cards
+    Incident: reports/self-heal/incidents/monthlyemi.json
+
+       at tests/self-heal/healingLocator.ts:114
+
+      112 |     const matchCount = await locator.count();
+      113 |     const incident = await recordIncident(page, testInfo, key, entry.intent, spec, matchCount);
+    > 114 |     throw new BrokenLocatorError(
+          |           ^
+      115 |       `Locator "${key}" ${incident.specText} matched ${matchCount} element(s), expected exactly 1.\n` +
+      116 |         `Intent: ${entry.intent}\nIncident: ${path.join(SELF_HEAL_DIR, 'incidents', `${safeFileName(key)}.json`)}`,
+      117 |       incident,
+        at findLegacy (tests/self-heal/healingLocator.ts:114:11)
+        at Object.<anonymous> (tests/steps/self-heal/legacy.steps.ts:10:16)
+        at .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:12:5
+
+    attachment #1: self-heal incident: monthlyEmi (application/json) ───────────────────────────────
+    test-results/self-heal-legacy-dashboard-0e054-with-the-legacy-page-object-self-heal/attachments/self-heal-incident-monthlyEmi-5442807cf19318851afaf240cef05856f04c10f4.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/self-heal-legacy-dashboard-0e054-with-the-legacy-page-object-self-heal/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/self-heal-legacy-dashboard-0e054-with-the-legacy-page-object-self-heal/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/self-heal-legacy-dashboard-0e054-with-the-legacy-page-object-self-heal/error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/self-heal-legacy-dashboard-0e054-with-the-legacy-page-object-self-heal/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/self-heal-legacy-dashboard-0e054-with-the-legacy-page-object-self-heal/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:15:3 › Legacy page object with deliberately broken locators › Type the interest rate with the legacy page object @self-heal › And I type "7.5" into the legacy interest rate box 
+
+    BrokenLocatorError: Locator "interestRateInput" getByRole('textbox', { name: 'Interest Rate' }) matched 0 element(s), expected exactly 1.
+    Intent: The Interest Rate number box in the loan details form
+    Incident: reports/self-heal/incidents/interestrateinput.json
+
+       at tests/self-heal/healingLocator.ts:114
+
+      112 |     const matchCount = await locator.count();
+      113 |     const incident = await recordIncident(page, testInfo, key, entry.intent, spec, matchCount);
+    > 114 |     throw new BrokenLocatorError(
+          |           ^
+      115 |       `Locator "${key}" ${incident.specText} matched ${matchCount} element(s), expected exactly 1.\n` +
+      116 |         `Intent: ${entry.intent}\nIncident: ${path.join(SELF_HEAL_DIR, 'incidents', `${safeFileName(key)}.json`)}`,
+      117 |       incident,
+        at findLegacy (tests/self-heal/healingLocator.ts:114:11)
+        at Object.<anonymous> (tests/steps/self-heal/legacy.steps.ts:14:10)
+        at .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:17:5
+
+    attachment #1: self-heal incident: interestRateInput (application/json) ────────────────────────
+    test-results/self-heal-legacy-dashboard-9d07d-with-the-legacy-page-object-self-heal/attachments/self-heal-incident-interestRateInput-e2a3b68670f7e9c6699589086bd66f54d068521c.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/self-heal-legacy-dashboard-9d07d-with-the-legacy-page-object-self-heal/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/self-heal-legacy-dashboard-9d07d-with-the-legacy-page-object-self-heal/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/self-heal-legacy-dashboard-9d07d-with-the-legacy-page-object-self-heal/error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/self-heal-legacy-dashboard-9d07d-with-the-legacy-page-object-self-heal/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/self-heal-legacy-dashboard-9d07d-with-the-legacy-page-object-self-heal/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:21:3 › Legacy page object with deliberately broken locators › Switch to a personal loan with the legacy page object @self-heal › When I click the legacy personal loan tab 
+
+    BrokenLocatorError: Locator "personalLoanTab" getByRole('tab', { name: 'Personal Loans' }) matched 0 element(s), expected exactly 1.
+    Intent: The tab that switches the calculator to a personal loan
+    Incident: reports/self-heal/incidents/personalloantab.json
+
+       at tests/self-heal/healingLocator.ts:114
+
+      112 |     const matchCount = await locator.count();
+      113 |     const incident = await recordIncident(page, testInfo, key, entry.intent, spec, matchCount);
+    > 114 |     throw new BrokenLocatorError(
+          |           ^
+      115 |       `Locator "${key}" ${incident.specText} matched ${matchCount} element(s), expected exactly 1.\n` +
+      116 |         `Intent: ${entry.intent}\nIncident: ${path.join(SELF_HEAL_DIR, 'incidents', `${safeFileName(key)}.json`)}`,
+      117 |       incident,
+        at findLegacy (tests/self-heal/healingLocator.ts:114:11)
+        at Object.<anonymous> (tests/steps/self-heal/legacy.steps.ts:22:10)
+        at .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:22:5
+
+    attachment #1: self-heal incident: personalLoanTab (application/json) ──────────────────────────
+    test-results/self-heal-legacy-dashboard-b6ad1-with-the-legacy-page-object-self-heal/attachments/self-heal-incident-personalLoanTab-fe55ba0a5b4ad5beb89a96713761294f91fda41a.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/self-heal-legacy-dashboard-b6ad1-with-the-legacy-page-object-self-heal/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/self-heal-legacy-dashboard-b6ad1-with-the-legacy-page-object-self-heal/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/self-heal-legacy-dashboard-b6ad1-with-the-legacy-page-object-self-heal/error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/self-heal-legacy-dashboard-b6ad1-with-the-legacy-page-object-self-heal/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/self-heal-legacy-dashboard-b6ad1-with-the-legacy-page-object-self-heal/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:27:3 › Legacy page object with deliberately broken locators › Type the loan tenure with the legacy page object @self-heal › And I type "10" into the legacy loan tenure box 
+
+    BrokenLocatorError: Locator "loanTenureInput" locator('xpath=/html/body/div/div/main/section[2]/div[2]/form/div[3]/div[1]/div/input') matched 0 element(s), expected exactly 1.
+    Intent: The Loan Tenure number box (in years) in the loan details form
+    Incident: reports/self-heal/incidents/loantenureinput.json
+
+       at tests/self-heal/healingLocator.ts:114
+
+      112 |     const matchCount = await locator.count();
+      113 |     const incident = await recordIncident(page, testInfo, key, entry.intent, spec, matchCount);
+    > 114 |     throw new BrokenLocatorError(
+          |           ^
+      115 |       `Locator "${key}" ${incident.specText} matched ${matchCount} element(s), expected exactly 1.\n` +
+      116 |         `Intent: ${entry.intent}\nIncident: ${path.join(SELF_HEAL_DIR, 'incidents', `${safeFileName(key)}.json`)}`,
+      117 |       incident,
+        at findLegacy (tests/self-heal/healingLocator.ts:114:11)
+        at Object.<anonymous> (tests/steps/self-heal/legacy.steps.ts:18:10)
+        at .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:29:5
+
+    attachment #1: self-heal incident: loanTenureInput (application/json) ──────────────────────────
+    test-results/self-heal-legacy-dashboard-4db9b-with-the-legacy-page-object-self-heal/attachments/self-heal-incident-loanTenureInput-41e55a4083c1deb2696c190b32519f1cd863ae56.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/self-heal-legacy-dashboard-4db9b-with-the-legacy-page-object-self-heal/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/self-heal-legacy-dashboard-4db9b-with-the-legacy-page-object-self-heal/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/self-heal-legacy-dashboard-4db9b-with-the-legacy-page-object-self-heal/error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/self-heal-legacy-dashboard-4db9b-with-the-legacy-page-object-self-heal/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/self-heal-legacy-dashboard-4db9b-with-the-legacy-page-object-self-heal/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:33:3 › Legacy page object with deliberately broken locators › Read the total interest with the legacy page object @self-heal › Then the legacy "total interest" shows "₹14,64,522" 
+
+    BrokenLocatorError: Locator "totalInterestValue" locator('div.summary-card.interest > span.amount') matched 0 element(s), expected exactly 1.
+    Intent: The Total Interest Payable amount shown in the loan summary cards
+    Incident: reports/self-heal/incidents/totalinterestvalue.json
+
+       at tests/self-heal/healingLocator.ts:114
+
+      112 |     const matchCount = await locator.count();
+      113 |     const incident = await recordIncident(page, testInfo, key, entry.intent, spec, matchCount);
+    > 114 |     throw new BrokenLocatorError(
+          |           ^
+      115 |       `Locator "${key}" ${incident.specText} matched ${matchCount} element(s), expected exactly 1.\n` +
+      116 |         `Intent: ${entry.intent}\nIncident: ${path.join(SELF_HEAL_DIR, 'incidents', `${safeFileName(key)}.json`)}`,
+      117 |       incident,
+        at findLegacy (tests/self-heal/healingLocator.ts:114:11)
+        at Object.<anonymous> (tests/steps/self-heal/legacy.steps.ts:10:16)
+        at .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:35:5
+
+    attachment #1: self-heal incident: totalInterestValue (application/json) ───────────────────────
+    test-results/self-heal-legacy-dashboard-24b2e-with-the-legacy-page-object-self-heal/attachments/self-heal-incident-totalInterestValue-c6edb3a002dede9e4ffbd440d479e7fa8afdae76.json
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/self-heal-legacy-dashboard-24b2e-with-the-legacy-page-object-self-heal/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/self-heal-legacy-dashboard-24b2e-with-the-legacy-page-object-self-heal/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/self-heal-legacy-dashboard-24b2e-with-the-legacy-page-object-self-heal/error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/self-heal-legacy-dashboard-24b2e-with-the-legacy-page-object-self-heal/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/self-heal-legacy-dashboard-24b2e-with-the-legacy-page-object-self-heal/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5 failed
+    [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:10:3 › Legacy page object with deliberately broken locators › Read the monthly EMI with the legacy page object @self-heal 
+    [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:15:3 › Legacy page object with deliberately broken locators › Type the interest rate with the legacy page object @self-heal 
+    [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:21:3 › Legacy page object with deliberately broken locators › Switch to a personal loan with the legacy page object @self-heal 
+    [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:27:3 › Legacy page object with deliberately broken locators › Type the loan tenure with the legacy page object @self-heal 
+    [self-heal] › .features-gen/self-heal/self-heal/legacy-dashboard.feature.spec.js:33:3 › Legacy page object with deliberately broken locators › Read the total interest with the legacy page object @self-heal 

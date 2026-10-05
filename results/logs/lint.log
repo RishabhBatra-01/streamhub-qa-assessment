@@ -1,0 +1,6 @@
+$ npm run lint
+
+
+> streamhub-qa-assessment@1.0.0 lint
+> eslint .
+

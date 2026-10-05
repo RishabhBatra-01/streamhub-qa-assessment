@@ -156,3 +156,19 @@ KEY` as nullable. SQLite, unlike most databases, allows NULL in a non-INTEGER pr
   `stripVTControlCharacters`.
 - **Design decision:** no healing at run time. A failing locator still fails the test, and healing is a
   separate, reviewed step that produces a patch, never a silent green build.
+
+## Phase 7: CI, results and README
+
+- **Used for:** the GitHub Actions workflow, the `npm run results` publisher, and the README.
+- **Checked action versions instead of assuming:** the latest majors of `actions/checkout`, `setup-node` and
+  `upload-artifact` were looked up (v7, newer than the model knew), and their `action.yml` inputs were read
+  before use.
+- **Ran the CI steps locally first:** `npm run format:check` (the first CI step) failed on
+  `eslint.config.js`, so CI would have gone red on its first run. Fixed before it was ever pushed.
+- **Committed evidence cleaned up:** the first published results contained absolute local paths (stack
+  traces in logs and the Cucumber report), and the Cucumber JSON duplicated every screenshot (about 4 MB). Paths
+  are now rewritten to repository-relative ones, and the JSON skips binary attachments (456 KB).
+- **Reports opened, not just generated:** both HTML reports were served locally and checked in a browser:
+  116/116 in the Playwright report; 95 passed + 21 known defects (each with its note and defect tag) in the
+  Cucumber report.
+- **Links verified:** all 94 relative links in the Markdown files resolve.

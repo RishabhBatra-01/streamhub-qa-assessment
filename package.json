@@ -26,7 +26,8 @@
     "test:sql": "bddgen && playwright test --project=sql",
     "sql": "node scripts/run-sql.ts",
     "test:self-heal": "bddgen && playwright test --project=self-heal",
-    "self-heal": "node scripts/self-heal/heal.ts"
+    "self-heal": "node scripts/self-heal/heal.ts",
+    "results": "node scripts/publish-results.ts"
   },
   "dependencies": {
     "react": "^19.3.0",

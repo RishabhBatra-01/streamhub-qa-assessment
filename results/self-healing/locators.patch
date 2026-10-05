@@ -1,0 +1,37 @@
+diff --git a/tests/self-heal/legacyLocators.ts b/tests/self-heal/legacyLocators.ts
+index 98fcee6..493ae64 100644
+--- a/tests/self-heal/legacyLocators.ts
++++ b/tests/self-heal/legacyLocators.ts
+@@ -21,27 +21,27 @@ export const LEGACY_LOCATORS = {
+   // 1. Stale data-testid: the app renamed it to 'emi-value'.
+   monthlyEmi: {
+     intent: 'The Monthly EMI amount shown in the loan summary cards',
+-    spec: { testId: 'monthly-emi' },
++    spec: { testId: 'emi-value' },
+   },
+   // 2. Wrong role: a number input has role "spinbutton", not "textbox".
+   interestRateInput: {
+     intent: 'The Interest Rate number box in the loan details form',
+-    spec: { role: 'textbox', name: 'Interest Rate' },
++    spec: { role: 'spinbutton', name: 'Interest Rate' },
+   },
+   // 3. Renamed text: the tab is labelled "Personal Loan" (singular).
+   personalLoanTab: {
+     intent: 'The tab that switches the calculator to a personal loan',
+-    spec: { role: 'tab', name: 'Personal Loans' },
++    spec: { role: 'tab', name: 'Personal Loan' },
+   },
+   // 4. Brittle absolute XPath: breaks as soon as the page layout changes.
+   loanTenureInput: {
+     intent: 'The Loan Tenure number box (in years) in the loan details form',
+-    spec: { xpath: '/html/body/div/div/main/section[2]/div[2]/form/div[3]/div[1]/div/input' },
++    spec: { role: 'spinbutton', name: 'Loan Tenure' },
+   },
+   // 5. Brittle CSS tied to old styling class names that no longer exist.
+   totalInterestValue: {
+     intent: 'The Total Interest Payable amount shown in the loan summary cards',
+-    spec: { css: 'div.summary-card.interest > span.amount' },
++    spec: { testId: 'total-interest-value' },
+   },
+ } satisfies Record<string, LegacyLocator>;
+ 

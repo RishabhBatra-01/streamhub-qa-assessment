@@ -1,0 +1,5 @@
+# Generated test evidence: hide from GitHub's language stats and collapse in diffs.
+results/** linguist-generated=true
+docs/self-healing/example-run/** linguist-generated=true
+sql/screenshots/** linguist-generated=true
+package-lock.json linguist-generated=true

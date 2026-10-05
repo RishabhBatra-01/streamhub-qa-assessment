@@ -1,0 +1,14 @@
+{
+  "key": "loanTenureInput",
+  "spec": {
+    "role": "spinbutton",
+    "name": "Loan Tenure"
+  },
+  "specText": "getByRole('spinbutton', { name: 'Loan Tenure' })",
+  "overridden": true,
+  "element": {
+    "tag": "input",
+    "text": "",
+    "ariaSnapshot": "- spinbutton \"Loan Tenure\": \"5\""
+  }
+}

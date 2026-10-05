@@ -1,0 +1,89 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+# A newer push to the same branch cancels the run in progress.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Format, lint, type check, unit tests, build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run format:check
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test:unit
+      - run: npm run build
+
+  e2e:
+    name: UI, API and SQL tests (Playwright + Cucumber)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      # config/environments/ci.env: builds the app and tests the production build.
+      TEST_ENV: ci
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run UI, API and SQL scenarios
+        run: npm test
+      - name: Upload reports (HTML, Cucumber, JUnit, traces of failures)
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: test-reports
+          path: |
+            reports/
+            test-results/
+          retention-days: 14
+
+  self-heal:
+    name: Self-healing POC (deliberately broken locators)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: quality
+    env:
+      TEST_ENV: ci
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      # Claude Code is not logged in on CI runners, so --provider auto uses the non-AI matcher
+      # (stated in the report). The job fails only if a broken locator could not be healed.
+      - name: Detect, heal and validate the broken locators (dry run)
+        run: npm run self-heal
+      - name: Upload the healing report and patch
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: self-healing-report
+          path: reports/self-heal/
+          retention-days: 14
