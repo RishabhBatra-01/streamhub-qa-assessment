@@ -9,6 +9,10 @@ When('I select the {string} tab', async ({ dashboardPage, scenario }, loanType: 
   scenario.loanType = loanType;
 });
 
+Then('the {string} tab is selected', async ({ dashboardPage }, loanType: LoanTypeName) => {
+  await expect(dashboardPage.tab(loanType)).toHaveAttribute('aria-selected', 'true');
+});
+
 When(
   'I enter a loan of {int} at {float}% for {int} years',
   async ({ dashboardPage, scenario }, amount: number, ratePercent: number, tenureYears: number) => {

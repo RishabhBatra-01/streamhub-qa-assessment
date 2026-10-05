@@ -24,7 +24,9 @@
     "report": "playwright show-report reports/playwright-html",
     "playwright:install": "playwright install --with-deps chromium",
     "test:sql": "bddgen && playwright test --project=sql",
-    "sql": "node scripts/run-sql.ts"
+    "sql": "node scripts/run-sql.ts",
+    "test:self-heal": "bddgen && playwright test --project=self-heal",
+    "self-heal": "node scripts/self-heal/heal.ts"
   },
   "dependencies": {
     "react": "^19.3.0",

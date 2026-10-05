@@ -65,6 +65,19 @@ export default defineConfig({
       },
     },
     {
+      // ⚠️ Deliberately broken locators (AI self-healing exercise). Never part of `npm test`;
+      // run with `npm run test:self-heal` or `npm run self-heal`. See docs/SELF_HEALING.md.
+      ...defineBddProject({
+        name: 'self-heal',
+        features: 'tests/features/self-heal/**/*.feature',
+        featuresRoot: 'tests/features',
+        steps: ['tests/steps/ui/**/*.ts', 'tests/steps/self-heal/**/*.ts', ...SHARED_STEPS],
+      }),
+      // Healing re-runs scenarios to validate candidate fixes, so results must be deterministic.
+      retries: 0,
+      use: { ...devices['Desktop Chrome'], baseURL: env.appBaseUrl, reducedMotion: 'reduce' },
+    },
+    {
       ...defineBddProject({
         name: 'sql',
         features: 'tests/features/sql/**/*.feature',

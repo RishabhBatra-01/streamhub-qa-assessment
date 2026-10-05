@@ -2,6 +2,7 @@ import type { Page, TestInfo } from '@playwright/test';
 import { createBdd, test as base } from 'playwright-bdd';
 import { PostsApiClient } from '../api/PostsApiClient';
 import { DashboardPage } from '../pages/DashboardPage';
+import { LegacyDashboardPage } from '../pages/LegacyDashboardPage';
 import { SchedulePage } from '../pages/SchedulePage';
 import { SqlSession } from '../sql/SqlSession';
 import { ScenarioContext } from './ScenarioContext';
@@ -13,6 +14,8 @@ interface Fixtures {
   pageErrors: string[];
   dashboardPage: DashboardPage;
   schedulePage: SchedulePage;
+  /** ⚠️ Deliberately broken locators, for the self-healing exercise only. */
+  legacyDashboardPage: LegacyDashboardPage;
   postsApi: PostsApiClient;
   /** A fresh in-memory SQLite database for one SQL scenario; closed afterwards. */
   sql: SqlSession;
@@ -52,6 +55,10 @@ export const test = base.extend<Fixtures>({
   schedulePage: async ({ page, pageErrors }, use) => {
     void pageErrors;
     await use(new SchedulePage(page));
+  },
+  legacyDashboardPage: async ({ page, pageErrors }, use, testInfo) => {
+    void pageErrors;
+    await use(new LegacyDashboardPage(page, testInfo));
   },
   postsApi: async ({ request }, use) => {
     await use(new PostsApiClient(request));

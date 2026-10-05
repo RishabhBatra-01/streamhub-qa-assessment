@@ -4,3 +4,4 @@ reports
 package-lock.json
 test-results
 .features-gen
+docs/self-healing/example-run

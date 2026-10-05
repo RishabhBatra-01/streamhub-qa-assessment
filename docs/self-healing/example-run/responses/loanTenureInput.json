@@ -1,0 +1,23 @@
+{
+  "suggestions": [
+    {
+      "spec": {
+        "role": "spinbutton",
+        "name": "Loan Tenure"
+      },
+      "confidence": 1,
+      "reason": "\"Loan Tenure\" shares words with the intent"
+    },
+    {
+      "spec": {
+        "role": "slider",
+        "name": "Loan Tenure slider"
+      },
+      "confidence": 0.6666666666666666,
+      "reason": "\"Loan Tenure slider\" shares words with the intent"
+    }
+  ],
+  "raw": {
+    "considered": 2
+  }
+}

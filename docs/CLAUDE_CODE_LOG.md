@@ -129,3 +129,30 @@ KEY` as nullable. SQLite, unlike most databases, allows NULL in a non-INTEGER pr
 - **Over-claim removed:** a first draft of `sql/README.md` said the streak query "runs unchanged on
   PostgreSQL, MySQL and SQL Server". That had not been tested, so it was reworded to say it has only
   been run on SQLite.
+
+## Phase 6: AI self-healing
+
+- **Used for:** designing the healing architecture (locators as data with an intent, incidents, replay
+  validation, patching), writing the healer CLI and providers, and the design document.
+- **Environment problem handled, not hidden:** the headless `claude -p` call failed with "OAuth session
+  expired". `claude auth status` showed the CLI was logged out (separate from the desktop app login). Only
+  the user can log in, so the POC got an `auto` provider mode that falls back to a deterministic non-AI
+  matcher and **states the fallback in the report**, instead of failing or silently pretending to use AI.
+- **Validation proved its worth on our own suggestions:** the first version of the fallback matcher
+  proposed the whole `form` for an input box, and the summary _card_ instead of the value inside it.
+  Replaying the scenario rejected every one of those. The matcher was then improved (container roles
+  excluded, single-word matches damped), but the point stands: suggestions are untrusted until replayed.
+- **Bug in the AI-written matcher, caught in review:** a "same name, wrong role" match could _lower_ a
+  candidate's score (`score = 0.95` instead of `Math.max(score, 0.95)`).
+- **Proved it does not hide real bugs:** with the Monthly EMI card temporarily removed from the app, the
+  healer found no fix for that locator, and also refused otherwise-correct fixes whose scenarios still
+  failed on the missing EMI (2 of 5 healed, exit code 1). The app was then restored.
+- **Claims measured, not assumed:** the design doc first said the accessibility tree is "about 10x
+  smaller" than HTML. Measured: 2.5 KB against 9.8 KB, so about 4x. Corrected.
+- **No local paths in committed reports:** the report JSON first stored absolute paths
+  (`/Users/...`). These are now repository-relative, and the example run was checked for local paths
+  before committing.
+- **Lint caught a regex with a raw control character** (ANSI stripping); replaced with Node's
+  `stripVTControlCharacters`.
+- **Design decision:** no healing at run time. A failing locator still fails the test, and healing is a
+  separate, reviewed step that produces a patch, never a silent green build.

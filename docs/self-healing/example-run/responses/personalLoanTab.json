@@ -1,0 +1,15 @@
+{
+  "suggestions": [
+    {
+      "spec": {
+        "role": "tab",
+        "name": "Personal Loan"
+      },
+      "confidence": 1,
+      "reason": "\"Personal Loan\" shares words with the intent"
+    }
+  ],
+  "raw": {
+    "considered": 1
+  }
+}
