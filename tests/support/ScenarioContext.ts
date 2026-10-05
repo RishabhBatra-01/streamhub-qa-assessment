@@ -1,4 +1,5 @@
 import type { APIResponse } from '@playwright/test';
+import type { PostRequest } from '../api/postPayloads';
 import type { LoanTypeName } from '../pages/DashboardPage';
 import type { FirstEmi, Loan } from '../utils/loanMath';
 
@@ -32,6 +33,8 @@ export class ScenarioContext {
     return this.firstEmiMonth;
   }
 
+  /** The request a "When I send ..." step sent, so "Then" steps can compare the echo. */
+  sentPost?: PostRequest;
   private response?: APIResponse;
   private responseBody?: string;
 

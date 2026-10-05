@@ -59,7 +59,8 @@ export default defineConfig({
         steps: ['tests/steps/api/**/*.ts', ...SHARED_STEPS],
       }),
       use: {
-        baseURL: env.apiBaseUrl,
+        // Trailing slash so relative paths like 'posts' resolve under any base path (e.g. https://host/api/).
+        baseURL: `${env.apiBaseUrl}/`,
         extraHTTPHeaders: { Accept: 'application/json' },
       },
     },

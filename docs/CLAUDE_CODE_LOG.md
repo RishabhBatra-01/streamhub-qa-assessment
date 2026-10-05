@@ -76,3 +76,32 @@ from these notes.
   expected.
 - **Flakiness check:** the full UI suite was run 3 times in a row (123 runs, all passed), and once
   against the production build in CI mode.
+
+## Phase 4: API tests (JSONPlaceholder)
+
+- **Used for:** probing the real API, designing the scenarios and payload catalogue, the step definitions
+  and the defect report.
+- **Probed before asserting.** `curl` probes showed 201 for everything that is valid JSON (even a
+  5,000,000-character title), and a `500` for malformed JSON whose body **leaks a Node.js stack trace with
+  server file paths**. That security finding (API-006) only exists because the actual response was read
+  instead of assumed.
+- **Test design decision:** "does not cause a server error" and "is rejected with a client error" are
+  _separate_ scenarios. If they were combined in one `@fail` (expected-failure) scenario, a real 5xx crash
+  would be hidden as "failed as expected".
+- **Expected failures verified, not assumed:** each `@fail` scenario's failure reason was extracted from
+  the JSON report. All 17 rejection checks fail on `201 Created`, and the 4 malformed-body checks fail on
+  `500`, so none of them "fails as expected" because of a typo or a broken step.
+- **Judgement over the literal brief:** the brief lists "unsupported special characters" as invalid. Not
+  every special character is, though: emoji, non-Latin scripts, quotes and SQL-looking text are
+  legitimate titles and are tested as _accepted and stored unchanged_. Only genuinely unsupported
+  characters (null byte, control characters, lone surrogate, right-to-left override, script tag) are
+  expected to be rejected.
+- **AI mistake caught:** while writing `docs/API_DEFECTS.md`, the escape sequence for the right-to-left
+  override character was written into the file as the **literal invisible U+202E character**, which is the
+  very spoofing character being reported, and it silently reversed part of a table row. Found by checking
+  the file, then replaced with escaped text. The whole repo was then scanned for invisible control or
+  direction characters (clean).
+- **Smaller fixes:** a feature-description line that started with `@known-defect` was parsed by Gherkin as
+  a tag. The API base URL now gets a trailing slash, so relative paths work under any base path
+  (`https://host/api/`). Cucumber has no "expected failure" status, so known-defect scenarios now carry an
+  explicit "KNOWN DEFECT: this failure is expected" attachment in that report.
