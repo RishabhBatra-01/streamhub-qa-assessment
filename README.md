@@ -4,6 +4,9 @@ A small **Loan Planner** web app (an EMI calculator with a dashboard, a payment-
 tested with a **Playwright + Cucumber (BDD) framework**, plus **API tests** for JSONPlaceholder, **SQL
 scenarios**, and an **AI self-healing** proof of concept for broken locators.
 
+> **Demo video (2:45):** [watch the walkthrough](https://go.screenpal.com/watch/cO61ilnxHQW): the app, the tests
+> running, the API defects, the SQL results and AI self-healing, all from real runs, in the brief's order.
+
 | Part of the brief                  | What was built                                                                    | Result                                                           |
 | ---------------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | **A1** Web application             | React + TypeScript app: dashboard, input-driven report, pie and bar charts, table | [app/](app/)                                                     |
